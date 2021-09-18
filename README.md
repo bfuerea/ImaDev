@@ -31,4 +31,6 @@ STEPS TAKEN:
 3. Clone Repo under my BitBucket/Git Repo main folder
 4. Add steps taken (and think about automatically adding commit description in this readme under ~Steps Taken~)
 5. Look up "proper HTML5 + CSS + JavaScript folder structure" 
-6. Long time to research best folder structure for this simple-yet-expandable project 
+6. Long time to research best folder structure for this simple-yet-expandable project
+7. Considering in using NPM. Have used it before in vue.js. Makes life too easy (or too hard - depending on the level of focus)
+8. Decided to go simple and scratch the project or branch it
