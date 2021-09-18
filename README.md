@@ -34,3 +34,6 @@ STEPS TAKEN:
 6. Long time to research best folder structure for this simple-yet-expandable project
 7. Considering in using NPM. Have used it before in vue.js. Makes life too easy (or too hard - depending on the level of focus)
 8. Decided to go simple and scratch the project or branch it if I change my mind later 
+9. Creating HTML5 Form. Some resources used: 
+    - https://htmlreference.io/forms/
+    - 
