@@ -23,3 +23,9 @@ JavaScript functionality:
 
 Clean code + documentation
 ###
+
+STEPS TAKEN:
+
+1. Create Repo
+2. Update Readme 
+3. Add steps taken (and think about automatically adding commit description in this readme under ~Steps Taken~)
