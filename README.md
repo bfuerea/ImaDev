@@ -36,4 +36,9 @@ STEPS TAKEN:
 8. Decided to go simple and scratch the project or branch it if I change my mind later 
 9. Creating HTML5 Form. Some resources used: 
     - https://htmlreference.io/forms/
-    - 
+    - https://code.tutsplus.com/tutorials/form-input-validation-using-only-html5-and-regex--cms-33095
+    - https://www.google.com/search?q=longest+name+in+history&rlz=1C1GCEU_enRO969RO969&oq=longest+name+in+history&aqs=chrome..69i57.3663j0j7&sourceid=chrome&ie=UTF-8
+    - https://github.com/bfuerea/fmvbRepo
+    - https://github.com/bfuerea/teamElements
+    - https://www.google.com/search?q=titles+before+names&rlz=1C1GCEU_enRO969RO969&oq=titles+before+names&aqs=chrome..69i57.14414j0j7&sourceid=chrome&ie=UTF-8
+    - https://code.tutsplus.com/tutorials/a-simple-regex-cheat-sheet--cms-31278
