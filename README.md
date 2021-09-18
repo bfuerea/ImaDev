@@ -28,4 +28,7 @@ STEPS TAKEN:
 
 1. Create Repo
 2. Update Readme 
-3. Add steps taken (and think about automatically adding commit description in this readme under ~Steps Taken~)
+3. Clone Repo under my BitBucket/Git Repo main folder
+4. Add steps taken (and think about automatically adding commit description in this readme under ~Steps Taken~)
+5. Look up "proper HTML5 + CSS + JavaScript folder structure" 
+6. Long time to research best folder structure for this simple-yet-expandable project 
