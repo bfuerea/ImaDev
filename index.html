@@ -4,61 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
     <title> Why are you reading this? </title>
 </head>
 <body>
-    <header> HTML5 </header>
-    <form action="js/submit" method="POST">
-        <fieldset id="lameform" class="form">
-            <legend>Please help us collect some data on our users</legend>
-
-            <label>Please tell us your name</label><br>
-            <select>
-                <option></option>
-                <option>Dr.</option>
-                <option>Mr.</option>
-                <option>Ms.</option>
-                <option>Mrs.</option>
-                <option>Miss</option>
-                <option>Mx.</option>
-                <option>Sir</option>
-                <option>Cllr.</option>
-                <option>Lady</option>
-                <option>Lord</option>    
-            </select>
-            <input type="text" name="firstname" placeholder="First Name" pattern="[a-zA-Z]+" minlength="2" maxlength="255" required>
-            <input type="text" name="middlename" placeholder="Middle Name" pattern="[a-zA-Z]+" minlength="2" maxlength="255">
-            <input type="text" name="lastname" placeholder="Last Name or Family Name" pattern="[a-zA-Z]+" minlength="2" maxlength="255" required>
-            
-            <br>
-            <label><input type="radio" name="sex" value="male">Male</label><br>
-            <label><input type="radio" name="sex" value="female">Female</label><br>
-            <label><input type="radio" name="sex" value="retarded">Other</label>
-            <br>
-            <input type="checkbox" name="GDPR"> I agree to all the GDPR bullsh*t
-            <br>
-            <button>Submit</button>
-            <button type="reset">Clear ALL fields</button>
-        </fieldset>
 
 
-        <fieldset class="form">
-            <legend>Some trash</legend>
-            <label>This is a dropdown (which I'd rater generate through js from a json file instead...</label>
-            <select>
-                <option>1</option>
-                <option>2</option>
-            </select>
+    <div class="container">
 
-            <label>This is a checkbox</label>
-            <input type="checkbox" name="check">
+        <header> HTML5 </header>
+        <form action="js/submit" method="POST">
+            <fieldset name="lameform" class="form">
+                <legend>Please help us collect some data on our users</legend>
 
-            <label>This is a radiobutton (see dropdon idea)</label>
-            <input type="radio" name="MASH">
-        </fieldset>
 
- 
+                <div class="container-special">
+                    <label>Please tell us your name</label><br>
+                    <select name="title" > 
+                        <option></option>
+                        <option>Dr.</option>
+                        <option>Mr.</option>
+                        <option>Ms.</option>
+                        <option>Mrs.</option>
+                        <option>Miss</option>
+                        <option>Mx.</option>
+                        <option>Sir</option>
+                        <option>Cllr.</option>
+                        <option>Lady</option>
+                        <option>Lord</option>    
+                    </select>
+                
+                    <input  type="text" name="firstname" placeholder="First Name" pattern="[a-zA-Z]+" minlength="2" maxlength="255" required>
+                    <input  type="text" name="middlename" placeholder="Middle Name" pattern="[a-zA-Z]+" minlength="2" maxlength="255">
+                    <input  type="text" name="lastname" placeholder="Last Name or Family Name" pattern="[a-zA-Z]+" minlength="2" maxlength="255" required>
+                </div>
+                <br>
+                <label><input  type="radio" name="sex" value="male" required>Male</label><br>
+                <label><input  type="radio" name="sex" value="female">Female</label><br>
+                <label><input  type="radio" name="sex" value="retarded">Other</label>
+                <br>
+                <input  type="checkbox" name="GDPR" required> I agree to all the GDPR bullsh*t
+                <br>
+                <button>Submit</button>
+                <button type="reset">Clear ALL fields</button>
+                <br>
+            </fieldset>
 
-    </form>
+
+            <fieldset class="form">
+                <legend>Some trash</legend>
+                <label>This is a dropdown (which I'd rater generate through js from a json file instead...</label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                </select>
+
+                <label>This is a checkbox</label>
+                <input type="checkbox" name="check">
+
+                <label>This is a radiobutton (see dropdon idea)</label>
+                <input type="radio" name="MASH">
+            </fieldset>
+        </form>
+
+    </div>
 </body>
 </html>

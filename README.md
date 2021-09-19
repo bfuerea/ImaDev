@@ -42,3 +42,4 @@ STEPS TAKEN:
     - https://github.com/bfuerea/teamElements
     - https://www.google.com/search?q=titles+before+names&rlz=1C1GCEU_enRO969RO969&oq=titles+before+names&aqs=chrome..69i57.14414j0j7&sourceid=chrome&ie=UTF-8
     - https://code.tutsplus.com/tutorials/a-simple-regex-cheat-sheet--cms-31278
+    - https://freefrontend.com/css-forms/
