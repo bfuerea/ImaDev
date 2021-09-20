@@ -43,3 +43,12 @@ STEPS TAKEN:
     - https://www.google.com/search?q=titles+before+names&rlz=1C1GCEU_enRO969RO969&oq=titles+before+names&aqs=chrome..69i57.14414j0j7&sourceid=chrome&ie=UTF-8
     - https://code.tutsplus.com/tutorials/a-simple-regex-cheat-sheet--cms-31278
     - https://freefrontend.com/css-forms/
+10. A bunch of CSS - research for dark mode. Time wasted. 
+11. Researching and reminding myself of generating DOM objects trough javascript
+    - https://www.formget.com/javascript-contact-form/
+    - https://github.com/bfuerea/serverTrafficLight
+    - https://www.youtube.com/watch?v=nExkUlangFI&ab_channel=Web-Crunch
+    - https://www.youtube.com/watch?v=82hnvUYY6QA&ab_channel=TraversyMedia
+
+12. Paused work. Did some https://www.freecodecamp.org/learn/responsive-web-design/
+    - I've got a project to do to complete the course - https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/use-tabindex-to-specify-the-order-of-keyboard-focus-for-several-elements

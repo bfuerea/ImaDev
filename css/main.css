@@ -5,7 +5,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Quicksand', sans-serif;
     background:#031321;
 }
 
@@ -32,6 +32,10 @@ header legend{
     color: #2196f3;
     font-size: 20px;
     overflow: hidden;
+    /* grid-template-areas:
+    "header header header"
+    "advert content content"
+    "footer footer footer"; */
 }
 
 button{
