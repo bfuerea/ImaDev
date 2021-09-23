@@ -49,6 +49,18 @@ STEPS TAKEN:
     - https://github.com/bfuerea/serverTrafficLight
     - https://www.youtube.com/watch?v=nExkUlangFI&ab_channel=Web-Crunch
     - https://www.youtube.com/watch?v=82hnvUYY6QA&ab_channel=TraversyMedia
-
 12. Paused work. Did some https://www.freecodecamp.org/learn/responsive-web-design/
     - I've got a project to do to complete the course - https://www.freecodecamp.org/learn/responsive-web-design/applied-accessibility/use-tabindex-to-specify-the-order-of-keyboard-focus-for-several-elements
+13. New info on dark mode CSS (still wasting time)
+    - https://blogs.windows.com/msedgedev/2021/06/16/dark-mode-html-form-controls/
+14. personal note: why most examples use SVG instead of Google Icons to show pass/fail ??? why do they complicate things so much? 
+15. https://www.javatpoint.com/how-to-call-a-javascript-function-in-html
+16. misc links:
+    - https://www.w3schools.com/cssref/pr_pos_top.asp
+    - https://www.w3schools.com/cssref/tryit.asp?filename=trycss_position_top
+    - https://stackoverflow.com/questions/4876749/move-up-character-displayed-inline
+    - https://www.javascripttutorial.net/dom/css/add-styles-to-an-element/
+    - https://www.w3schools.com/jsref/prop_element_nextelementsibling.asp
+    - https://stackoverflow.com/questions/41764061/adding-text-to-an-existing-text-element-in-javascript-via-dom
+    - https://htmldog.com/guides/javascript/advanced/creatingelements/
+    - https://bitsofco.de/realtime-form-validation/

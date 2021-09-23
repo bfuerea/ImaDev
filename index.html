@@ -8,141 +8,144 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@485&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 <!--This was part of the google fonts prerequisites-->
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/modal.css">
+    <!-- <link rel="stylesheet" href="css/beautiful.css"></script> -->
+    <script src="js/modal.js"></script>
+    <!-- <script src="js/functions.js"></script> -->
 <!--Obviously, above are the files I use-->
     <title> Why are you reading this? </title>
 </head>
 <body>
 
-
-    <div class="container">
-
-        <header>+JavaScript</header>
-
-        <h2 class="title">Create a new account</h2>
-        <form action="#" class="form">
-
-            <div class="input-group">
-            <label for="username" class="label">Username</label>
-            <input id="username" placeholder="username" type="text" class="input">
-            <span class="error-message"></span>
-            <svg class="icon icon-success hidden hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-
-            <svg class="icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
-            </svg>
-            </div>
-
-            <div class="input-group">
-            <label for="email" class="label">Email</label>
-            <input id="email" type="email" class="input" autocomplete placeholder="andy@web-crunch.com">
-            <span class="error-message"></span>
-            <svg class="icon icon-success hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-
-            <svg class="icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
-            </svg>
-            </div>
-
-            <div class="input-group">
-            <label for="password" class="label">Password</label>
-            <input id="password" type="password" class="input">
-            <span class="error-message"></span>
-            <svg class="icon icon-success hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-
-            <svg class="icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
-            </svg>
-            </div>
-
-            <div class="input-group">
-            <label for="password_confirmation" class="label">Password Confirmation</label>
-            <input id="password_confirmation" type="password" class="input">
-            <span class="error-message"></span>
-            <svg class="icon icon-success hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
-
-            <svg class="icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
-            </svg>
-            </div>
-
-        <input type="submit" class="button" value="Create account">
-
-        </form>
-    </div>
-
-
-
-
-
-        <br><br><br>
-        <header> HTML5 </header>
-        <form id="f1">
-            <fieldset name="lameform" class="form">
-                <legend>Please help us collect some data on our users</legend>
-
-
-                <div class="container-special">
-                    <label>Please tell us your name</label><br>
-                    <select name="title" > 
-                        <option></option>
-                        <option>Dr.</option>
-                        <option>Mr.</option>
-                        <option>Ms.</option>
-                        <option>Mrs.</option>
-                        <option>Miss</option>
-                        <option>Mx.</option>
-                        <option>Sir</option>
-                        <option>Cllr.</option>
-                        <option>Lady</option>
-                        <option>Lord</option>    
-                    </select>
-                
-                    <input  type="text" name="firstname" placeholder="First Name" pattern="[a-zA-Z]+" minlength="2" maxlength="255" required>
-                    <input  type="text" name="middlename" placeholder="Middle Name" pattern="[a-zA-Z]+" minlength="2" maxlength="255">
-                    <input  type="text" name="lastname" placeholder="Last Name or Family Name" pattern="[a-zA-Z]+" minlength="2" maxlength="255" required>
+    <main>
+        <div class="container">
+            <h1 class="header">Oh Dear God, Fuck!</h1>
+            <!-- onfocus="focusevent()" onfocusout="lostfocusevent()" onchange="focusevent()" -->
+            <form action="#" class="form" id="f1">
+                <div class="input-group">
+                    <label for="username" class="label">*Username
+                        <input id="username" placeholder="User Name" type="text" class="input" >
+                        <span class="error-message"></span> <span class="icon"></span>
+                    </label>
                 </div>
-                <br>
-                <label><input  type="radio" name="sex" value="male" required>Male</label><br>
-                <label><input  type="radio" name="sex" value="female">Female</label><br>
-                <label><input  type="radio" name="sex" value="retarded">Other</label>
-                <br>
-                <input  type="checkbox" name="GDPR" required> I agree to all the GDPR bullsh*t
-                <br>
-                <button>Submit</button>
-                <button type="reset">Clear ALL fields</button>
-                <br>
-            </fieldset>
-        </form> <br>      
-        <form id="f2" action="js/submit" method="POST">
-            <fieldset class="form">
-                <legend>Some trash</legend>
-                <label>This is a dropdown (which I'd rater generate through js from a json file instead...</label>
-                <select>
-                    <option>1</option>
-                    <option>2</option>
-                </select>
+                
+                <div class="input-group">
+                    <label for="email" class="label">*Email
+                        <input id="email" type="email" class="input" autocomplete placeholder="email@address.domain" >
+                        <span class="error-message"></span> <span class="icon"></span>
+                    </label>
+                </div>
 
-                <label>This is a checkbox</label>
-                <input type="checkbox" name="check">
+                <div class="input-group">
+                    <label for="password" class="label">*Password
+                        <input id="password" type="password" class="input" >
+                        <span class="error-message"></span><span class="icon"></span>
+                    </label>
+                </div>
 
-                <label>This is a radiobutton (see dropdon idea)</label>
-                <input type="radio" name="MASH">
-            </fieldset>
-        </form> <br> 
+                <div class="input-group">
+                    <label for="password_confirmation" class="label">*Password Confirmation
+                        <input id="password_confirmation" type="password" class="input" >
+                        <span class="error-message"></span><span class="icon"></span>
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label for="name" class="label">Tell us your name:<br>
+                        <select id="title">
+                            <option></option>
+                            <option>Dr.</option>
+                            <option>Mr.</option>
+                            <option>Ms.</option>
+                            <option>Mrs.</option>
+                            <option>Miss</option>
+                            <option>Mx.</option>
+                            <option>Sir</option>
+                            <option>Cllr.</option>
+                            <option>Lady</option>
+                            <option>Lord</option>    
+                        </select>
+                        <!-- <input id="firstname" placeholder="*First Name" type="text" class="input" pattern="[a-zA-Z]+" minlength="2" maxlength="255" required >
+                        <span class="error-message"></span><span class="icon"></span>
+                        <input id="middlename" placeholder="Middle Name" type="text" class="input" pattern="[a-zA-Z]+" minlength="2" maxlength="255" >
+                        <span class="error-message"></span><span class="icon"></span>
+                        <input id="lastname" placeholder="*Last Name" type="text" class="input" pattern="[a-zA-Z]+" minlength="2" maxlength="255" required >
+                        <span class="error-message"></span><span class="icon"></span> -->
+                        <input id="name" placeholder="*First Name Middle Name Last Name" type="text" class="input" size="50">
+                        <span class="error-message"></span><span class="icon"></span>
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label for="sex" class="label-small"> Sex:
+                        <input type="radio" name="sex" value="male">Male
+                        <input type="radio" name="sex" value="female">Female
+                        <input type="radio" name="sex" value="alien">Other
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label for="birthdate" class="label-small">*Birthday:
+                        <input id="bday" type="date" class="input">
+                        <span class="error-message"></span><span class="icon"></span>
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label for="cnp" class="label-small">CNP (Romania only):
+                        <input id="cnp" type="text" class="input">
+                        <span class="error-message"></span><span class="icon"></span>
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label for="gdpr" class="label-small">
+                        <input type="checkbox" id="gdpr" required > *I Agree to Terms&Conditions and aknowledge that I've read my GDPR rights...
+                        <span class="error-message"></span><span class="icon"></span>
+                    </label>
+                </div>
+                <div class="infoText">Fields marked with * are mandatory.</div>
+                <div class="buttons">
+                    <button type="reset">Clear ALL fields</button>
+                </div>
+            </form>
+            
+            <button>Submit</button>
+            <button id="test" onclick="msgprint()"><span class="material-icons-outlined md-18" >build</span></button>
+            <button id="myBtn" onclick="showmodal()"><span class="material-icons-outlined md-18">info</span></button>
 
 
 
-    </div>
+        </div>
+   
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Modal Header</h2>
+              </div>
+              <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+              </div>
+              <div class="modal-footer">
+                <h3>Modal Footer</h3>
+              </div>
+            </div>
+          
+          </div>
+
+
+
+
+
+
+        <footer>&copy; I'm having fun</footer>
+    </main>
+    <script src="js/main.js"></script>
 </body>
+
+
 </html>

@@ -1,42 +1,115 @@
-body{
+/* I got this little bit of information (below) from https://blogs.windows.com/msedgedev/2021/06/16/dark-mode-html-form-controls/ */
+:root {
+    color-scheme: dark;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+ /* Rules for sizing the icon. */
+.material-icons.md-8 { font-size: 8px; }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); } 
+
+.material-icons-outlined.md-8 { font-size: 8px; }
+.material-icons-outlined.md-18 { font-size: 18px; }
+.material-icons-outlined.md-24 { font-size: 24px; }
+.material-icons-outlined.md-36 { font-size: 36px; }
+.material-icons-outlined.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons-outlined.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons-outlined.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons-outlined.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons-outlined.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+body {
     margin: 0;
     padding: 0;
-    display: flex;
+    display:grid;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     font-family: 'Quicksand', sans-serif;
     background:#031321;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+    /* grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-rows: 1fr ;
+    grid-gap: 10px; */
 }
 
-header legend{
-    font-size: 27px;
+.label-small {
+    font-size: smaller;
 }
 
-
-
-.container > .special{
-    background-color: #031321;
-    color: #2196f3;
-    position: relative;
-    border: 5px solid #fff;
-    opacity: 0;
-    border-radius: 50%;
-
+.header{
+    font-family: 'Tangerine', serif;
+    font-size: 100px;
+    text-shadow: 4px 4px 4px #aaa;
 }
 
+.footer { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .container{
     position: relative;
     display: inline-block;
     padding: 15px 30px;
     color: #2196f3;
     font-size: 20px;
-    overflow: hidden;
+    /* overflow: hidden; */
+    /* border: 1px solid #fff; */
     /* grid-template-areas:
     "header header header"
     "advert content content"
     "footer footer footer"; */
 }
+
+
+.container > .special{
+    background-color: #031321;
+    color: #2196f3;
+    border: 5px solid #fff;
+    opacity: 0;
+    border-radius: 50%;
+
+}
+
 
 button{
     background-color: #031321;
@@ -60,3 +133,24 @@ button:hover{
 
 } 
 
+.infoText {
+    padding-bottom: 20px;
+    position: relative;
+    top: 10px;
+    font-size: x-small;
+}
+
+.error-message {
+    color: red;
+    font-size: smaller;
+}
+
+.icon-success {
+    color: greenyellow;
+    vertical-align:middle; 
+}
+
+.icon-error {
+    color: red;
+    vertical-align:middle; 
+}

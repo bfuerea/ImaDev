@@ -1,0 +1,61 @@
+{
+    "name" : "InternationalTr",
+    "pageObjectType" : "WEBPAGE",
+    "elements" : [ {
+      "objectId" : "InternationalPayment.LoginUser",
+      "objectType" : "Textbox",
+      "objectLocator" : "xpath=//*[@kwp='frmLogin_loginComponent_tbxUserName']"
+    }, {
+      "objectId" : "InternationalPayment.Pass",
+      "objectType" : "Textbox",
+      "objectLocator" : "xpath=//*[@kwp='frmLogin_loginComponent_tbxPassword']"
+    }, {
+      "objectId" : "InrenationalPayment.loginButton",
+      "objectType" : "Button",
+      "objectLocator" : "xpath=//*[@kwp='frmLogin_loginComponent_btnLogin']"
+    }, {
+      "objectId" : "InrenationalPayment.payment",
+      "objectType" : "Dropdown",
+      "objectLocator" : "xpath=//*[@kwp='frmDashboard_customheader_topmenu_imgLblTransfers']"
+    }, {
+      "objectId" : "InternationalPayment.MakeAPayment",
+      "objectType" : "Button",
+      "objectLocator" : "xpath=//*[@kwp='frmDashboard_customheader_topmenu_flxTransferMoney']"
+    }, {
+      "objectId" : "InternationalPayment.SelectFrom",
+      "objectType" : "Dropdown",
+      "objectLocator" : "xpath=//*[@kwp='frmMakePayment_txtTransferFrom']"
+    }, {
+      "objectId" : "InternationalPayment.SelAcc",
+      "objectType" : "Others",
+      "objectLocator" : "xpath=//*[@kwp='frmMakePayment_segTransferFrom[0,1]_flxFromAccountsList_flxAmount']"
+    }, {
+      "objectId" : "InternationalPayment.Toacc",
+      "objectType" : "Dropdown",
+      "objectLocator" : "xpath=//*[@kwp='frmMakePayment_txtTransferTo']"
+    }, {
+      "objectId" : "InternationalPayment.sellAcc",
+      "objectType" : "Others",
+      "objectLocator" : "xpath=//*[@kwp='frmMakePayment_segTransferTo[-1,2]_flxTransfersTo_flxAccountListItemWrapper']"
+    }, {
+      "objectId" : "InternationalPayment.Amount",
+      "objectType" : "Textbox",
+      "objectLocator" : "xpath=//*[@kwp='frmMakePayment_txtAmount']"
+    }, {
+      "objectId" : "InternationalPayment.Ben",
+      "objectType" : "RadioButton",
+      "objectLocator" : "xpath=//*[@kwp='frmMakePayment_lblRadioBtn2']"
+    }, {
+      "objectId" : "InternationalPayment.Continue",
+      "objectType" : "Button",
+      "objectLocator" : "xpath=//*[@kwp='frmMakePayment_btnConfirm']"
+    }, {
+      "objectId" : "InternationalPayment.Confirm",
+      "objectType" : "Button",
+      "objectLocator" : "xpath=//*[@kwp='frmConfirmEuro_btnContinue']"
+    }, {
+      "objectId" : "InternationalPayment.inspectref",
+      "objectType" : "Others",
+      "objectLocator" : "xpath=//*[@kwp='frmAcknowledgementEuro_lblRefrenceNumberValue']"
+    } ]
+  }

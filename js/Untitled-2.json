@@ -1,0 +1,21 @@
+{
+  "name" : "InfinityLoginPage",
+  "pageObjectType" : "WEBPAGE",
+  "elements" : [ {
+    "objectId" : "LoginPage.UserName",
+    "objectType" : "Textbox",
+    "objectLocator" : "xpath=//*[@kwp='frmLogin_loginComponent_tbxUserName']"
+  }, {
+    "objectId" : "LoginPage.Password",
+    "objectType" : "Textbox",
+    "objectLocator" : "xpath=//input[@kwp='frmLogin_loginComponent_tbxPassword']"
+  }, {
+    "objectId" : "LoginPage.SignIn",
+    "objectType" : "Button",
+    "objectLocator" : "xpath=//label[@kwp='frmLogin_loginComponent_btnLogin']"
+  }, {
+    "objectId" : "LoginPage.RememberMe",
+    "objectType" : "Checkbox",
+    "objectLocator" : "xpath=//label[@kwp='frmLogin_loginComponent_rememberMe_lblFavoriteEmailCheckBox']"
+  } ]
+}
