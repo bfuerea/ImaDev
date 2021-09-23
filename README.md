@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/dd6d1e54-f487-4929-986d-4f0c1a3cf181/deploy-status)](https://app.netlify.com/sites/imadev/deploys)
+
 # ImaDev
 Checking my webDev knowledge in 2021.
 
