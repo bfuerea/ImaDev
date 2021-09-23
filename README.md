@@ -64,3 +64,4 @@ STEPS TAKEN:
     - https://stackoverflow.com/questions/41764061/adding-text-to-an-existing-text-element-in-javascript-via-dom
     - https://htmldog.com/guides/javascript/advanced/creatingelements/
     - https://bitsofco.de/realtime-form-validation/
+    - https://regex101.com/library/bpaE5K -- validare CNP 

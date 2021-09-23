@@ -14,17 +14,15 @@
 <!--This was part of the google fonts prerequisites-->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/modal.css">
-    <!-- <link rel="stylesheet" href="css/beautiful.css"></script> -->
-    <script src="js/modal.js"></script>
-    <!-- <script src="js/functions.js"></script> -->
-<!--Obviously, above are the files I use-->
+    <script src="js/functions.js"></script>
+    <!--Obviously, above are the files I use-->
     <title> Why are you reading this? </title>
 </head>
 <body>
 
     <main>
         <div class="container">
-            <h1 class="header">Oh Dear God, Fuck!</h1>
+            <h1 class="header">Greetings!</h1>
             <!-- onfocus="focusevent()" onfocusout="lostfocusevent()" onchange="focusevent()" -->
             <form action="#" class="form" id="f1">
                 <div class="input-group">
@@ -69,82 +67,65 @@
                             <option>Lady</option>
                             <option>Lord</option>    
                         </select>
-                        <!-- <input id="firstname" placeholder="*First Name" type="text" class="input" pattern="[a-zA-Z]+" minlength="2" maxlength="255" required >
-                        <span class="error-message"></span><span class="icon"></span>
-                        <input id="middlename" placeholder="Middle Name" type="text" class="input" pattern="[a-zA-Z]+" minlength="2" maxlength="255" >
-                        <span class="error-message"></span><span class="icon"></span>
-                        <input id="lastname" placeholder="*Last Name" type="text" class="input" pattern="[a-zA-Z]+" minlength="2" maxlength="255" required >
-                        <span class="error-message"></span><span class="icon"></span> -->
                         <input id="name" placeholder="*First Name Middle Name Last Name" type="text" class="input" size="50">
                         <span class="error-message"></span><span class="icon"></span>
                     </label>
                 </div>
                 <div class="input-group">
-                    <label for="sex" class="label-small"> Sex:
-                        <input type="radio" name="sex" value="male">Male
-                        <input type="radio" name="sex" value="female">Female
-                        <input type="radio" name="sex" value="alien">Other
+                    <label for="cnp" class="label">*CNP
+                        <input id="cnp" placeholder="cnp" type="text" class="input" >
+                        <span class="error-message"></span> <span class="icon"></span>
+                    </label>
+                </div>
+
+                <div class="input-group">
+                    <label for="sex" class="label"> Sex:
+                        <input type="radio" id= "sex_m" name="sex" value="male">Male
+                        <input type="radio" id= "sex_f" name="sex" value="female">Female
+                        <input type="radio" id= "sex_o" name="sex" value="alien">Other
                     </label>
                 </div>
                 <div class="input-group">
-                    <label for="birthdate" class="label-small">*Birthday:
+                    <label for="birthdate" class="label">*Birthday:
                         <input id="bday" type="date" class="input">
                         <span class="error-message"></span><span class="icon"></span>
                     </label>
                 </div>
                 <div class="input-group">
-                    <label for="cnp" class="label-small">CNP (Romania only):
-                        <input id="cnp" type="text" class="input">
-                        <span class="error-message"></span><span class="icon"></span>
-                    </label>
-                </div>
-                <div class="input-group">
                     <label for="gdpr" class="label-small">
-                        <input type="checkbox" id="gdpr" required > *I Agree to Terms&Conditions and aknowledge that I've read my GDPR rights...
+                        <input type="checkbox" id="gdpr" > *I Agree to Terms&Conditions and aknowledge that I've read my GDPR rights...
                         <span class="error-message"></span><span class="icon"></span>
                     </label>
                 </div>
                 <div class="infoText">Fields marked with * are mandatory.</div>
                 <div class="buttons">
-                    <button type="reset">Clear ALL fields</button>
+                    <button type="button" onclick="ClearFields()">Clear ALL fields</button>
+                    <button type="submit" id="submitdata">SUBMIT</button>
+                    <!-- <input type="submit" class="button" value="submit - but with input type submit"> -->
                 </div>
             </form>
-            
-            <button>Submit</button>
-            <button id="test" onclick="msgprint()"><span class="material-icons-outlined md-18" >build</span></button>
-            <button id="myBtn" onclick="showmodal()"><span class="material-icons-outlined md-18">info</span></button>
 
+            <!-- <button id="test" onclick="msgprint()"><span class="material-icons-outlined md-18" >build</span></button> -->
+            <!-- <button id="myBtn" onclick="modal"><span class="material-icons-outlined md-18">info</span></button> -->
 
+            <div id="overlay" class="timedoverlay"> 
+                <!-- timed overlay content -->
+            </div>
 
         </div>
    
         <div id="myModal" class="modal">
-
             <!-- Modal content -->
-            <div class="modal-content">
-              <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2>Modal Header</h2>
-              </div>
-              <div class="modal-body">
-                <p>Some text in the Modal Body</p>
-                <p>Some other text...</p>
-              </div>
-              <div class="modal-footer">
-                <h3>Modal Footer</h3>
-              </div>
-            </div>
-          
-          </div>
+        </div>
 
 
 
 
 
 
-        <footer>&copy; I'm having fun</footer>
+        <script src="js/main.js"></script>
+
     </main>
-    <script src="js/main.js"></script>
 </body>
 
 
