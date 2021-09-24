@@ -141,13 +141,19 @@ class FormValidator {
 
       // Birth date is a special field so we need to check it individually
       if (field.id === "bday") {
-        if (new Date(field.value) < new Date("2019-09-23")) {
-          this.setStatus(field, null, "success");
-        } else if (field.value === '') { 
-          this.setStatus(field, "Please enter date here", "error");
-        } else {
-          this.setStatus(field, "are you even born?", "error");
+        let dob = new Date(field.value) ;
+//new Date(field.value) < new Date()
+        if (field.value === '') { 
+          this.setStatus(field, "Please enter date", "error");
+        } else if (this.calculate_age(dob) < 16) {
+          this.setStatus(field, "Age must be over 16", "error");
+        } else if (this.calculate_age(dob) > 120) {
+          this.setStatus(field, "Are you sure you are still alive?", "error");
+        } else { 
+          this.setStatus(field, null, "success"); 
         }
+        
+
       }
 
 
@@ -197,6 +203,13 @@ class FormValidator {
       }
     })
     return condition;
+  }
+
+  calculate_age(dob) { 
+    var diff_ms = Date.now() - dob.getTime();
+    var age_dt = new Date(diff_ms); 
+  
+    return Math.abs(age_dt.getUTCFullYear() - 1970);
   }
 
 }
