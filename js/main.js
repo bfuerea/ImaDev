@@ -86,7 +86,7 @@ class FormValidator {
 
       // check for a valid email address
       if (field.type === "email") {
-        const re = /\S+@\S+\.\S+/;
+        const re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
         if (re.test(field.value)) {
           this.setStatus(field, null, "success");
         } else {
