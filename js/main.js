@@ -21,7 +21,7 @@ class FormValidator {
       });
 
 
-      if (self.allOK() === "true") {
+      if (self.allOK() == true) {
         this.createModal();
       };
     });
@@ -94,11 +94,21 @@ class FormValidator {
         }
       }
 
-      // Checking password format 
+
+ /* TODO: use function to make this password + password_confirmation check more readable and less code  */
+      // Checking password combo 
       if (field.id === "password")  {
-        const re = /(?=.*[!@#$%^&*])/;
+        const re = /(?=.*[<>!@#$%^&*])/;
+        const passconfField = this.form.querySelector('#password_confirmation');
         if (re.test(field.value)) {
           this.setStatus(field, null, "success");
+          if (passconfField.value != '') {
+            if (passconfField.value != field.value) {
+              this.setStatus(passconfField, "Password does not match", "error");
+            } else {
+              this.setStatus(passconfField, null, "success");
+            }
+          }
         } else {
           this.setStatus(field, "Password Not Strong Enough", "error");
         }
@@ -107,12 +117,13 @@ class FormValidator {
       // Password confirmation edge case
       if (field.id === "password_confirmation") {
         const passwordField = this.form.querySelector('#password');
-
-        if (field.value.trim() == "") {
+        if (passwordField.style.cssText === "border: 1px solid red;") {
+          this.setStatus(field, "enter a valid password", "error");
+        } else  if (field.value.trim() == "") {
           this.setStatus(field, "Password confirmation required", "error");
         } else if (field.value != passwordField.value) {
           this.setStatus(field, "Password does not match", "error");
-        } else {
+        } else  {
           this.setStatus(field, null, "success");
         }
       }
@@ -177,12 +188,12 @@ class FormValidator {
   }
 
   allOK() {
-    let condition = "true";
+    let condition = true;
     let self = this;
     this.fields.forEach(field => {
     const input = document.querySelector(`#${field}`);
       if (input.style.cssText === "border: 1px solid red;") {
-        condition = "false";
+        condition = false;
       }
     })
     return condition;
