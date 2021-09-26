@@ -9,10 +9,10 @@ function okay() {
 
     let overlay = document.getElementById("overlay");
     console.log(overlay) ;
-    overlay.innerHTML = '<div class="modal-header"><span class="close" onclick="closeOverlay()">&times;</span></div><div id="overlaybody" class="modal-body">Ok. I am sending the data to the server...</div>'
+    overlay.innerHTML = '<div class="modal-header"><span class="close" onclick="closeOverlay()">&times;</span></div><div id="overlaybody" class="modal-body"><p>Ok. I am sending the data to the server...</p></div>'
     overlay.style.display = "block";
 
-    let time = 5000;
+    let time = 9999999999995000;
     timeoutOverlay = setTimeout(closeOverlay,time);
     // console.log(timeoutOverlay);
     document.getElementById("overlaybody").innerHTML+= "this window will close in " + time + " miliseconds";

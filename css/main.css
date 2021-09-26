@@ -60,14 +60,14 @@
 body {
     margin: 0;
     padding: 0;
-    display:grid;
+    display: flexbox;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     font-family: 'Quicksand', sans-serif;
     background:#031321;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr auto;
+    /* grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto; */
     /* grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     grid-template-rows: 1fr ;
     grid-gap: 10px; */
@@ -89,9 +89,11 @@ body {
 .container{
     position: relative;
     display: inline-block;
-    padding: 15px 30px;
+    padding: 1em 2em;
     color: #2196f3;
     font-size: 20px;
+    max-width: 60rem;
+    min-height: 200px;
     /* overflow: hidden; */
     /* border: 1px solid #fff; */
     /* grid-template-areas:
@@ -101,14 +103,12 @@ body {
 }
 
 
-.container > .special{
-    background-color: #031321;
-    color: #2196f3;
-    border: 5px solid #fff;
-    opacity: 0;
-    border-radius: 50%;
-
-}
+/* 
+.form {
+    display: grid;
+    grid-template-areas: "label input error icon";
+    grid-template-rows: 2fr 1fr 1fr 0.5fr;
+} */
 
 
 button{
@@ -172,3 +172,17 @@ button:hover{
     text-align: left;
 }
    */
+
+   @media (max-width: 60em) {
+    .error-message::before {
+        content: '\a';
+        white-space: pre;
+    }
+
+}
+
+@media (max-width: 40em) {
+    span {
+        font-size: 12px;
+    }
+}
