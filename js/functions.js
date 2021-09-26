@@ -12,7 +12,7 @@ function okay() {
     overlay.innerHTML = '<div class="modal-header"><span class="close" onclick="closeOverlay()">&times;</span></div><div id="overlaybody" class="modal-body"><p>Ok. I am sending the data to the server...</p></div>'
     overlay.style.display = "block";
 
-    let time = 9999999999995000;
+    let time = 5000;
     timeoutOverlay = setTimeout(closeOverlay,time);
     // console.log(timeoutOverlay);
     document.getElementById("overlaybody").innerHTML+= "this window will close in " + time + " miliseconds";
