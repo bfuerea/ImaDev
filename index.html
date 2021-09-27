@@ -1,59 +1,71 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@485&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+        <!--==================== Google Font + Icons ====================-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@485&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+        
+        <!--==================== CSS ====================-->
+        <link rel="stylesheet" href="css/newMain.css">
 
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/modal.css">
-    <script src="js/functions.js"></script>
+        <title>Responsive Form</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            
+             <nav>
+                <div class="theme-switch-wrapper">
+                     <label class="theme-switch" for="checkbox">
+                  <input type="checkbox" id="checkbox" />
+                  <div class="slider round"></div>
+                </label>
+                  <em>Enable Dark Mode!</em>
+                </div>
+              </nav>  
+        </header>
 
-    <title> Why are you reading this? </title>
-</head>
-<body>
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home section" id="home">
+                <h1 style="background-color: rgb(15, 15, 85); text-align: center;">Greetings!</h1> 
+            </section>
 
-    <main>
-        <div class="container">
-            <h1 class="header">Greetings!</h1>
-            <form action="#" class="form" id="f1">
-                <div class="input-group">
-                    <label for="username" class="label">*Username
+            <!--==================== FORM ====================-->
+            <section class="form section" id="form" style="background-color: rgb(4, 86, 97);">
+                    
+                    <label for="username" class="label">*Username</label>
                         <input id="username" placeholder="User Name" type="text" class="input" >
-                        <span class="error-message"></span> <span class="icon"></span>
-                    </label>
-                </div>
-                
-                <div class="input-group">
-                    <label for="email" class="label">*Email
+                        <!-- <span class="error-message"></span> <span class="icon"></span>  -->
+                        <span class="message"></span>
+                    
+                    <label for="email" class="label">*Email</label>
                         <input id="email" type="email" class="input" autocomplete placeholder="email@address.domain" >
-                        <span class="error-message"></span> <span class="icon"></span>
-                    </label>
-                </div>
+                        <span class="message"></span>
+                    
 
-                <div class="input-group">
-                    <label for="password" class="label">*Password
+                    <label for="password" class="label">*Password</label>
                         <input id="password" type="password" class="input" >
-                        <span class="error-message"></span><span class="icon"></span>
-                    </label>
-                </div>
+                        <span class="message"></span>
+                    
 
-                <div class="input-group">
-                    <label for="password_confirmation" class="label">*Password Confirmation
+                    <label for="password_confirmation" class="label">*Password Confirmation</label>
                         <input id="password_confirmation" type="password" class="input" >
-                        <span class="error-message"></span><span class="icon"></span>
-                    </label>
-                </div>
-                <div class="input-group">
-                    <label for="name" class="label">Tell us your name:<br>
-                        <select id="title">
+                        <span class="message"></span>
+                    
+                    
+                    <label for="name" class="label">Name:</label>
+                        <div><select id="title" class="title">
                             <option></option>
                             <option>Dr.</option>
                             <option>Mr.</option>
@@ -67,62 +79,44 @@
                             <option>Lord</option>    
                         </select>
                         <input id="name" placeholder="*First Name Middle Name Last Name" type="text" class="input" size="50">
-                        <span class="error-message"></span><span class="icon"></span>
-                    </label>
-                </div>
-                <div class="input-group">
-                    <label for="cnp" class="label">*CNP
+                        <span class="message"></span></div>
+                    
+                    <label for="cnp" class="label">*CNP</label>
                         <input id="cnp" placeholder="cnp" type="text" class="input" >
-                        <span class="error-message"></span> <span class="icon"></span>
-                    </label>
-                </div>
+                        <span class="message"></span>
+                    
 
-                <div class="input-group">
-                    <label for="sex" class="label"> Sex:
+                    <label for="sex" class="label">Sex:</label>
                         <input type="radio" id= "sex_m" name="sex" value="male">Male
                         <input type="radio" id= "sex_f" name="sex" value="female">Female
                         <input type="radio" id= "sex_o" name="sex" value="alien">Other
-                    </label>
-                </div>
-                <div class="input-group">
-                    <label for="birthdate" class="label">*Birthday:
+                        <span class="message"></span>
+
+                    <label for="birthdate" class="label">*Birthday:</label>
                         <input id="bday" type="date" class="input">
-                        <span class="error-message"></span><span class="icon"></span>
-                    </label>
-                </div>
-                <div class="input-group">
-                    <label for="gdpr" class="label-small">
+                        <span class="message"></span>
+                    
+                    <label for="gdpr" class="label-small"></label>
                         <input type="checkbox" id="gdpr" > *I Agree to Terms & Conditions 
-                        <span class="error-message"></span><span class="icon"></span>
-                    </label>
-                </div>
+                        <span class="message"></span>
+                    
                 <div class="infoText">Fields marked with * are mandatory.</div>
-                <div class="buttons">
-                    <button type="button" onclick="ClearFields()">Clear ALL fields</button>
-                    <button type="submit" id="submitdata">SUBMIT</button>
-                    <!-- <input type="submit" class="button" value="submit - but with input type submit"> -->
-                </div>
-            </form>
+            </section>
 
-            <!-- <button id="test" onclick="msgprint()"><span class="material-icons-outlined md-18" >build</span></button> -->
-            <!-- <button id="myBtn" onclick="modal"><span class="material-icons-outlined md-18">info</span></button> -->
+        </main>
 
-            <div id="overlay" class="timedoverlay"> 
-                <!-- timed overlay content -->
-            </div>
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
 
-        </div>
-   
-        <div id="myModal" class="modal">
-            <!-- Modal content -->
-        </div>
+            
+        </footer>
+        
 
+        <!--==================== EXTRA JS ====================-->
+        <script src="js/toggle.js"></script>
+        <script src="js/functions.js"></script>
 
-
-        <script src="js/main.js"></script>
-
-    </main>
-</body>
-
-
+        <!--==================== MAIN JS ====================-->
+        <script src="js/newmain.js"></script>
+    </body>
 </html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@485&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <script src="js/functions.js"></script>
+
+    <title> Why are you reading this? </title>
+</head>
+<body>
+
+    <main>
+        <div class="container">
+            <h1 class="header" style="width: auto;">Greetings!</h1>
+            <form action="#" class="form" id="f1">
+                <div class="input-group">
+                    <label for="username" class="label">*Username
+                        <input id="username" placeholder="User Name" type="text" class="input" >
+                        <span class="error-message"></span> <span class="icon"></span>
+                    </label>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email" class="label">*Email
+                        <input id="email" type="email" class="input" autocomplete placeholder="email@address.domain" >
+                        <span class="error-message"></span> <span class="icon"></span>
+                    </label>
+                </div>
+
+                <div class="input-group">
+                    <label for="password" class="label">*Password
+                        <input id="password" type="password" class="input" >
+                        <span class="error-message"></span><span class="icon"></span>
+                    </label>
+                </div>
+
+                <div class="input-group">
+                    <label for="password_confirmation" class="label">*Password Confirmation
+                        <input id="password_confirmation" type="password" class="input" >
+                        <span class="error-message"></span><span class="icon"></span>
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label for="name" class="label">Tell us your name:<br>
+                        <select id="title">
+                            <option></option>
+                            <option>Dr.</option>
+                            <option>Mr.</option>
+                            <option>Ms.</option>
+                            <option>Mrs.</option>
+                            <option>Miss</option>
+                            <option>Mx.</option>
+                            <option>Sir</option>
+                            <option>Cllr.</option>
+                            <option>Lady</option>
+                            <option>Lord</option>    
+                        </select>
+                        <input id="name" placeholder="*First Name Middle Name Last Name" type="text" class="input" size="50">
+                        <span class="error-message"></span><span class="icon"></span>
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label for="cnp" class="label">*CNP
+                        <input id="cnp" placeholder="cnp" type="text" class="input" >
+                        <span class="error-message"></span> <span class="icon"></span>
+                    </label>
+                </div>
+
+                <div class="input-group">
+                    <label for="sex" class="label"> Sex:
+                        <input type="radio" id= "sex_m" name="sex" value="male">Male
+                        <input type="radio" id= "sex_f" name="sex" value="female">Female
+                        <input type="radio" id= "sex_o" name="sex" value="alien">Other
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label for="birthdate" class="label">*Birthday:
+                        <input id="bday" type="date" class="input">
+                        <span class="error-message"></span><span class="icon"></span>
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label for="gdpr" class="label-small">
+                        <input type="checkbox" id="gdpr" > *I Agree to Terms & Conditions 
+                        <span class="error-message"></span><span class="icon"></span>
+                    </label>
+                </div>
+                <div class="infoText">Fields marked with * are mandatory.</div>
+                <div class="buttons">
+                    <button type="button" onclick="ClearFields()">Clear ALL fields</button>
+                    <button type="submit" id="submitdata">SUBMIT</button>
+                    <!-- <input type="submit" class="button" value="submit - but with input type submit"> -->
+                </div>
+            </form>
+
+            <!-- <button id="test" onclick="msgprint()"><span class="material-icons-outlined md-18" >build</span></button> -->
+            <!-- <button id="myBtn" onclick="modal"><span class="material-icons-outlined md-18">info</span></button> -->
+
+            <div id="overlay" class="timedoverlay"> 
+                <!-- timed overlay content -->
+            </div>
+
+        </div>
+   
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+        </div>
+
+
+
+        <script src="js/main.js"></script>
+
+    </main>
+</body>
+
+
+</html>
