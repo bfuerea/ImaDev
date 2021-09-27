@@ -67,3 +67,6 @@ STEPS TAKEN:
     - https://htmldog.com/guides/javascript/advanced/creatingelements/
     - https://bitsofco.de/realtime-form-validation/
     - https://regex101.com/library/bpaE5K -- validare CNP 
+
+Latest Lighthouse Response (pre-css overhaul)
+![image](https://user-images.githubusercontent.com/18399890/134921976-f4a3e7fd-ec68-4208-ab31-744b08375229.png)
