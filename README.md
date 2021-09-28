@@ -81,4 +81,7 @@ Latest Lighthouse Response (pre-css overhaul)
     - https://javisperez.github.io/tailwindcolorshades
     - https://codepen.io/ananyaneogi/pen/zXZyMP
 
+18. Reading up on UX best practices
+    - https://material.io/components/text-fields#anatomy
+
     

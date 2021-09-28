@@ -38,6 +38,7 @@ h1 {
 p {
   font-size: 1.1rem;
   line-height: 1.6rem;
+  text-align: center;
 }
 
 a {
@@ -230,6 +231,7 @@ input:checked + .slider:before {
 
 .input-group__inline {
   display: inline;
+  padding: 5px;
   text-indent: 30%;
 
 }
