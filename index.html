@@ -39,6 +39,7 @@
             <!--==================== HOME ====================-->
             <section class="home section" id="home">
                 <h1>Greetings!</h1> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore repellat, ullam delectus molestias nulla reiciendis.</p>
             </section>
 
             <!--==================== FORM ====================-->
@@ -46,18 +47,16 @@
                 
                 <form class="form" id="f1">
                     <div class="input-group">
-                        <fieldset>
                             <legend>*Username</legend>
-                            <input id="username" placeholder="User Name" type="text" class="input" >
+                            <input id="username" placeholder="User Name" type="text" class="input">
                             <span class="message"></span>
-                        </fieldset>
                     </div>
                     
-                    <fieldset class="input-group">
+                    <div class="input-group">
                         <legend for="email" class="label">*Email</legend>
                         <input id="email" type="email" class="input" autocomplete placeholder="email@address.domain" >
                         <span class="message"></span>
-                    </fieldset>
+                    </div>
                     
                     <div class="input-group">
                         <label for="password" class="label">*Password</label>
@@ -86,7 +85,7 @@
                             <option>Lady</option>
                             <option>Lord</option>
                         </select>
-                        <input id="name" placeholder="*First Name Middle Name Last Name" type="text" class="input" size="50">
+                        <input id="name" placeholder="*First Name Middle Name Last Name" type="text" class="input">
                         <span class="message"></span>
                     </div>
                     
@@ -96,17 +95,14 @@
                         <span class="message"></span>
                     </div>
                     
-                    <div class="input-group">
-                        <fieldset>
-                            <legend>Sex:</legend>
-                            <label> <input type=radio name=size> Female </label>
+                    <div class="input-group__inline">
+                            <label for="sex" class="label">Sex:</label>
+                            <!-- <label> <input type=radio name=size> Female </label>
                             <label> <input type=radio name=size> Male </label>
-                            <label> <input type=radio name=size> Other </label>
-                            <!-- <label for="sex" class="label">Sex:</label>
+                            <label> <input type=radio name=size> Other </label> -->
                             <input type="radio" id= "sex_m" name="sex" value="male">Male
                             <input type="radio" id= "sex_f" name="sex" value="female">Female
-                            <input type="radio" id= "sex_o" name="sex" value="alien">Other -->
-                        </fieldset>
+                            <input type="radio" id= "sex_o" name="sex" value="alien">Other
                         <span class="message"></span>
                     </div>
 
@@ -116,27 +112,37 @@
                         <span class="message"></span>
                     </div>
                     
-                    <div class="input-group">
+                    <div class="input-group__inline">
                         <label for="gdpr" class="label"></label>
                         <input type="checkbox" id="gdpr" > *I Agree to Terms & Conditions
                         <span class="message"></span>
                     </div>
-                </form>    
                     <div class="infoText">Fields marked with * are mandatory.</div>
+                    <div class="buttons">
+                        <button type="button" onclick="ClearFields()">Clear ALL fields</button>
+                        <button type="submit" id="submitdata">SUBMIT</button>
+                    </div>
+                </form>    
+            </section>
+
+            <section class="info section">
+                
             </section>
 
         </main>
 
+
+
+
         <!--==================== FOOTER ====================-->
         <footer class="footer">
-
-            
+            &copy; Only the google skills count here...
         </footer>
         
 
         <!--==================== EXTRA JS ====================-->
         <script src="js/toggle.js"></script>
-        <script src="js/functions.js"></script>
+        <script src="js/newFunctions.js"></script>
 
         <!--==================== MAIN JS ====================-->
         <script src="js/newmain.js"></script>

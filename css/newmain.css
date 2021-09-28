@@ -213,16 +213,29 @@ input:checked + .slider:before {
 .input-group > * {
     flex-basis: 100%;
 } */
-
-fieldset {
-    display:grid;
+.form.section {
+  min-width: 300px;
+  max-width: 800px;
+}
+.input {
+  min-height: 40px;
+  font-size: inherit;
 }
 
 .input-group {
     display:grid;
+    padding: 5px;
 }
 
-input[type=radio] {
-    display: inline;
+
+.input-group__inline {
+  display: inline;
+  text-indent: 30%;
+
 }
 
+.infoText {
+  padding-top: 1rem;
+  font-size: smaller;
+  padding-bottom: 5rem;
+}
