@@ -84,4 +84,9 @@ Latest Lighthouse Response (pre-css overhaul)
 18. Reading up on UX best practices
     - https://material.io/components/text-fields#anatomy
 
-    
+Lightouse result after UI change
+--- mobile - white theme
+![image](https://user-images.githubusercontent.com/18399890/135145558-39022234-e248-4bd8-95e6-b6cd85c6005d.png)
+--- browser - dark theme
+![image](https://user-images.githubusercontent.com/18399890/135145641-9c1483d8-c157-41d2-a231-4e98108a7a4f.png)
+
