@@ -8,9 +8,13 @@ function okay() {
     let myform = document.getElementById("f1");
 
     let overlay = document.getElementById("overlay");
-    console.log(overlay) ;
-    overlay.innerHTML = '<div class="modal-header"><span class="close" onclick="closeOverlay()">&times;</span></div><div id="overlaybody" class="modal-body"><p>Ok. I am sending the data to the server...</p></div>'
     overlay.style.display = "block";
+
+    let overlaycontent = document.createElement("div");
+    overlaycontent.innerHTML = '<div class="modal-header"><span class="close" onclick="closeOverlay()">&times;</span><h2>Notification</h2></div><div class="modal-body"><p>Ok. I am sending the data to the server...</p></div>'
+    overlaycontent.setAttribute("class","modal-content");
+
+    overlay.appendChild(overlaycontent);
 
     let time = 5000;
     timeoutOverlay = setTimeout(closeOverlay,time);
@@ -25,7 +29,10 @@ function closeOverlay() {
     overlay.textContent="";
     closeModal();
 }
- 
+
+
+
+
 let timeoutOverlay = null;
 
 
