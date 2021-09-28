@@ -19,7 +19,7 @@ function okay() {
     let time = 5000;
     timeoutOverlay = setTimeout(closeOverlay,time);
     // console.log(timeoutOverlay);
-    document.getElementById("overlaybody").innerHTML+= "this window will close in " + time + " miliseconds";
+   // document.getElementById("overlaybody").innerHTML+= "this window will close in " + time + " miliseconds";
     ClearFields();
 }
 
