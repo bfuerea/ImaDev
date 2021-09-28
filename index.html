@@ -38,34 +38,42 @@
         <main class="main">
             <!--==================== HOME ====================-->
             <section class="home section" id="home">
-                <h1 style="background-color: rgb(15, 15, 85); text-align: center;">Greetings!</h1> 
+                <h1>Greetings!</h1> 
             </section>
 
             <!--==================== FORM ====================-->
-            <section class="form section" id="form" style="background-color: rgb(4, 86, 97);">
+            <section class="form section" id="sectionform">
+                
+                <form class="form" id="f1">
+                    <div class="input-group">
+                        <fieldset>
+                            <legend>*Username</legend>
+                            <input id="username" placeholder="User Name" type="text" class="input" >
+                            <span class="message"></span>
+                        </fieldset>
+                    </div>
                     
-                    <label for="username" class="label">*Username</label>
-                        <input id="username" placeholder="User Name" type="text" class="input" >
-                        <!-- <span class="error-message"></span> <span class="icon"></span>  -->
-                        <span class="message"></span>
-                    
-                    <label for="email" class="label">*Email</label>
+                    <fieldset class="input-group">
+                        <legend for="email" class="label">*Email</legend>
                         <input id="email" type="email" class="input" autocomplete placeholder="email@address.domain" >
                         <span class="message"></span>
+                    </fieldset>
                     
-
-                    <label for="password" class="label">*Password</label>
+                    <div class="input-group">
+                        <label for="password" class="label">*Password</label>
                         <input id="password" type="password" class="input" >
                         <span class="message"></span>
-                    
+                    </div>
 
-                    <label for="password_confirmation" class="label">*Password Confirmation</label>
+                    <div class="input-group">
+                        <label for="password_confirmation" class="label">*Password Confirmation</label>
                         <input id="password_confirmation" type="password" class="input" >
                         <span class="message"></span>
+                    </div>
                     
-                    
-                    <label for="name" class="label">Name:</label>
-                        <div><select id="title" class="title">
+                    <div class="input-group">
+                        <label for="name" class="label">*Name:</label>
+                        <select id="title" class="title">
                             <option></option>
                             <option>Dr.</option>
                             <option>Mr.</option>
@@ -76,31 +84,45 @@
                             <option>Sir</option>
                             <option>Cllr.</option>
                             <option>Lady</option>
-                            <option>Lord</option>    
+                            <option>Lord</option>
                         </select>
                         <input id="name" placeholder="*First Name Middle Name Last Name" type="text" class="input" size="50">
-                        <span class="message"></span></div>
+                        <span class="message"></span>
+                    </div>
                     
-                    <label for="cnp" class="label">*CNP</label>
+                    <div class="input-group">
+                        <label for="cnp" class="label">*CNP</label>
                         <input id="cnp" placeholder="cnp" type="text" class="input" >
                         <span class="message"></span>
+                    </div>
                     
-
-                    <label for="sex" class="label">Sex:</label>
-                        <input type="radio" id= "sex_m" name="sex" value="male">Male
-                        <input type="radio" id= "sex_f" name="sex" value="female">Female
-                        <input type="radio" id= "sex_o" name="sex" value="alien">Other
+                    <div class="input-group">
+                        <fieldset>
+                            <legend>Sex:</legend>
+                            <label> <input type=radio name=size> Female </label>
+                            <label> <input type=radio name=size> Male </label>
+                            <label> <input type=radio name=size> Other </label>
+                            <!-- <label for="sex" class="label">Sex:</label>
+                            <input type="radio" id= "sex_m" name="sex" value="male">Male
+                            <input type="radio" id= "sex_f" name="sex" value="female">Female
+                            <input type="radio" id= "sex_o" name="sex" value="alien">Other -->
+                        </fieldset>
                         <span class="message"></span>
+                    </div>
 
-                    <label for="birthdate" class="label">*Birthday:</label>
+                    <div class="input-group">
+                        <label for="birthdate" class="label">*Birthday:</label>
                         <input id="bday" type="date" class="input">
                         <span class="message"></span>
+                    </div>
                     
-                    <label for="gdpr" class="label-small"></label>
-                        <input type="checkbox" id="gdpr" > *I Agree to Terms & Conditions 
+                    <div class="input-group">
+                        <label for="gdpr" class="label"></label>
+                        <input type="checkbox" id="gdpr" > *I Agree to Terms & Conditions
                         <span class="message"></span>
-                    
-                <div class="infoText">Fields marked with * are mandatory.</div>
+                    </div>
+                </form>    
+                    <div class="infoText">Fields marked with * are mandatory.</div>
             </section>
 
         </main>

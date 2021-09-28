@@ -30,8 +30,9 @@ body {
 h1 {
   color: var(--heading-color);
   font-family: "Sansita One", serif;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 1vh;
+  text-align: center;
 }
 
 p {
@@ -181,30 +182,47 @@ input:checked + .slider:before {
 .material-icons-outlined.md-light { color: rgba(255, 255, 255, 1); }
 .material-icons-outlined.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
-.form {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr; 
+
+/* Using flex with flex-wrap */
+/* .input-group {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.label {
-    width: 10%;
+.input-group >.label {
     text-align: right;
-}
-/* 
-.message::after {
-    content: '\a';
-    white-space: pre;
-    background-color: red;
+    flex: 1 1 30%;
+    min-width: 10ch;
 }
 
-.input {
-    display: inline-block;
-    width: 50%;
-    background-color: blue;
+.input-group >.input {
+    flex: 1 1 30%;
+    max-width: 50ch;
 }
 
-.message {
-    display: inline-block;
-    width: 40%;
-    background-color: grey;
+.input-group >.message{
+    flex: 1 1 30%;
+}
+
+.input-group >.title {
+    flex: 1 1 10%;
 } */
+
+/* Using flex with 100% */
+/* 
+.input-group > * {
+    flex-basis: 100%;
+} */
+
+fieldset {
+    display:grid;
+}
+
+.input-group {
+    display:grid;
+}
+
+input[type=radio] {
+    display: inline;
+}
+

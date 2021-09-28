@@ -70,3 +70,15 @@ STEPS TAKEN:
 
 Latest Lighthouse Response (pre-css overhaul)
 ![image](https://user-images.githubusercontent.com/18399890/134921976-f4a3e7fd-ec68-4208-ab31-744b08375229.png)
+
+17. more links:
+    - https://css-tricks.com/snippets/html/html5-page-structure/
+    - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label
+    - https://www.w3.org/TR/2014/REC-html5-20141028/forms.html#forms
+    - https://www.nngroup.com/articles/errors-forms-design-guidelines/
+    - https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+    - https://getbootstrap.com/docs/3.4/css/
+    - https://javisperez.github.io/tailwindcolorshades
+    - https://codepen.io/ananyaneogi/pen/zXZyMP
+
+    

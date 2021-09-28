@@ -167,21 +167,21 @@ class FormValidator {
     }
   
     setStatus(field, message, status) {
+      const errmsgStyle = "color: red";  
       const errStyle = "border:1px solid red";
-    //   const okStyle = "border:0px";
-      const okIcon = '<span class="icon-success material-icons md-18" >check_circle</span>';
-      const badIcon = '<span class="icon-error material-icons md-18" >remove_circle_outline</span>';
+      const okStyle = "border:1px solid green";
+      const okIcon = '<span class="icon-success material-icons md-18" style="color: green" >check_circle</span>';
+      const badIcon = '<span class="icon-error material-icons md-18" style="color: red">remove_circle_outline</span>';
   
       if (status === "success") {
-        field.style.cssText = "";
+        field.style.cssText = okStyle;
         field.nextElementSibling.innerHTML = okIcon;
-        // field.nextElementSibling.nextElementSibling.innerHTML = okIcon;
       }
   
       if (status === "error") {
         field.style.cssText = errStyle;
         field.nextElementSibling.innerHTML = message + badIcon;
-        // field.nextElementSibling.nextElementSibling.innerHTML = badIcon;
+        field.nextElementSibling.style.cssText = errmsgStyle;
       }
     }
   
