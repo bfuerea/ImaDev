@@ -200,6 +200,7 @@ input:checked + .slider:before {
     display:grid;
     padding: 5px;
     color: inherit;
+    padding-inline: 2px;
 }
 
 

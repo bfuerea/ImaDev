@@ -20,10 +20,23 @@ class FormValidator {
           self.validateFields(input);
         });
   
-  
-        if (self.allOK() == true) {
-          this.createModal();
-        };
+/* 
+------------ Below is a COMPROMISE - already close to entering [IF-ELSE IF] hell and I know I should create functions for checking fields but come on ... ------------
+Checking fields against eachother isn't that clean using this method. Could be improved by turning all field checks into individual functions to be reused. 
+Not sure if that becomes func(func(func(()))) hell or whatever
+
+TODO: read up on latest "js code best practices". 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+        if (this.checkbdaycnp() == false) {
+          const bdayfield = document.querySelector ('#bday');
+          this.setStatus(bdayfield, "Date doesn't match CNP", "error");
+        } else {
+          if (self.allOK() == true){
+            this.createModal();
+          }
+        }
+
       });
   
   
@@ -55,116 +68,139 @@ class FormValidator {
         this.setStatus(field, `${field.id} hasn't got enough characters`, "error");
       } else if (field.value.length >= 255) {
         this.setStatus(field, `${field.id}'s text is too long`, "error");
-      } else {
+      } 
         
-        // Proper Username check 
-        if (field.id === "username") {
-          // const re = /[a-zA-Z._0-9]*/;   
-          const re = /[\w\d][^\W]/;
-          if (re.test(field.value) && (!field.value.includes(' '))) {
-            this.setStatus(field, null, "success");
-          } else {
-            this.setStatus(field, "Please enter a valid username", "error");
-          }
+      // Proper Username check 
+      if (field.id === "username") {
+        // const re = /[a-zA-Z._0-9]*/;   
+        const re = /[\w\d][^\W]/;
+        if (re.test(field.value) && (!field.value.includes(' '))) {
+          this.setStatus(field, null, "success");
+        } else {
+          this.setStatus(field, "Please enter a valid username", "error");
         }
-  
-        // Proper name check
-        if (field.id === "name") {
-          // const re = /\D+$/i ;
-          // accepting only name space name etc. 
-          const re = /^[a-z.\s]+$/i;
-          if (re.test(field.value)) {
-            this.setStatus(field, null, "success");
-          } else {
-            this.setStatus(field, "Please enter a valid name", "error");
-          }
+      }
+
+      // Proper name check
+      if (field.id === "name") {
+        // const re = /\D+$/i ;
+        // accepting only name space name etc. 
+        const re = /^[a-z.\s]+$/i;
+        if (re.test(field.value)) {
+          this.setStatus(field, null, "success");
+        } else {
+          this.setStatus(field, "Please enter a valid name", "error");
         }
-  
-        if (field.id === "cnp") {
-          this.checkcnp(field.value);
-          const re = /^[1-9]\d{2}(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])(0[1-9]|[1-4]\d|5[0-2]|99)(00[1-9]|0[1-9]\d|[1-9]\d\d)\d$/;
-          if (re.test(field.value)) {
-            if (this.checkcnp(field.value)) {
-              this.setStatus(field, null, "success");
+      }
+
+      if (field.id === "cnp") {
+        const re = /^[1-9]\d{2}(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])(0[1-9]|[1-4]\d|5[0-2]|99)(00[1-9]|0[1-9]\d|[1-9]\d\d)\d$/;
+        if (re.test(field.value)) {
+          let cnpCheck = this.checkcnp(field.value);
+          if (cnpCheck === true) {
+            this.setStatus(field, null, "success");
+            const bdayfield = this.form.querySelector('#bday');
+            if ((this.checkbdaycnp() == false) && (bdayfield.value != "")){
+              this.setStatus(bdayfield, "Date doesn't match CNP", "error");
             }
           } else {
             this.setStatus(field, "Please enter a valid cnp", "error");
           }
+        } else {
+          this.setStatus(field, "Please enter a valid cnp", "error");
         }
-  
-  
-        // check for a valid email address
-        if (field.type === "email") {
-          const re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-          if (re.test(field.value)) {
-            this.setStatus(field, null, "success");
-          } else {
-            this.setStatus(field, "Please enter valid email address", "error");
-          }
-        }
-  
-  
-        /* TODO: use function to make this password + password_confirmation check more readable and less code  */
-        // Checking password combo 
-        if (field.id === "password")  {
-          const re = /(?=.*[<>!@#$%^&*])/;
-          const passconfField = this.form.querySelector('#password_confirmation');
-          if (re.test(field.value)) {
-            this.setStatus(field, null, "success");
-            if (passconfField.value != '') {
-              if (passconfField.value != field.value) {
-                this.setStatus(passconfField, "Password does not match", "error");
-              } else {
-                this.setStatus(passconfField, null, "success");
-              }
-            }
-          } else {
-            this.setStatus(field, "Password Not Strong Enough", "error");
-          }
-        }
-  
-        // Password confirmation edge case
-        if (field.id === "password_confirmation") {
-          const passwordField = this.form.querySelector('#password');
-          if (passwordField.style.cssText === "border: 1px solid red;") {
-            this.setStatus(field, "enter a valid password", "error");
-          } else  if (field.value == "") {
-            this.setStatus(field, "Password confirmation required", "error");
-          } else if (field.value != passwordField.value) {
-            this.setStatus(field, "Password does not match", "error");
-          } else  {
-            this.setStatus(field, null, "success");
-          }
-        }
-  
-        // Make sure user checks T&C + GDPR
-        if (field.id === "gdpr") {
-          if (field.checked) {
-            this.setStatus(field, null, "success");
-          } else {
-            this.setStatus(field, "uhm, you forgot to check this", "error");
-          }
-        }
-  
-        // Birth date is a special field so we need to check it individually
-        if (field.id === "bday") {
-          let dob = new Date(field.value) ;
-          if (field.value === '') { 
-            this.setStatus(field, "Please enter date", "error");
-          } else if (this.calculate_age(dob) < 16) {
-            this.setStatus(field, "Age must be over 16", "error");
-          } else if (this.calculate_age(dob) > 120) {
-            this.setStatus(field, "Are you sure you are still alive?", "error");
-          } else { 
-            this.setStatus(field, null, "success"); 
-          }
-        }
-  
-  
       }
+
+
+      // check for a valid email address
+      if (field.type === "email") {
+        const re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+        if (re.test(field.value)) {
+          this.setStatus(field, null, "success");
+        } else {
+          this.setStatus(field, "Please enter valid email address", "error");
+        }
+      }
+
+
+      /* TODO: use function to make this password + password_confirmation check more readable and less code  */
+      // Checking password combo 
+      if (field.id === "password")  {
+        const re = /(?=.*[<>!@#$%^&*])/;
+        const passconfField = this.form.querySelector('#password_confirmation');
+        if (re.test(field.value)) {
+          this.setStatus(field, null, "success");
+          if (passconfField.value != '') {
+            if (passconfField.value != field.value) {
+              this.setStatus(passconfField, "Password does not match", "error");
+            } else {
+              this.setStatus(passconfField, null, "success");
+            }
+          }
+        } else {
+          this.setStatus(field, "Password Not Strong Enough", "error");
+        }
+      }
+
+      // Password confirmation edge case
+      if (field.id === "password_confirmation") {
+        const passwordField = this.form.querySelector('#password');
+        if (passwordField.style.cssText === "border: 1px solid red;") {
+          this.setStatus(field, "enter a valid password", "error");
+        } else  if (field.value == "") {
+          this.setStatus(field, "Password confirmation required", "error");
+        } else if (field.value != passwordField.value) {
+          this.setStatus(field, "Password does not match", "error");
+        } else  {
+          this.setStatus(field, null, "success");
+        }
+      }
+
+      // Make sure user checks T&C + GDPR
+      if (field.id === "gdpr") {
+        if (field.checked) {
+          this.setStatus(field, null, "success");
+        } else {
+          this.setStatus(field, "uhm, you forgot to check this", "error");
+        }
+      }
+
+      // Birth date is a special field so we need to check it individually
+      if (field.id === "bday") {
+        let dob = new Date(field.value) ;
+        if (field.value === '') { 
+          this.setStatus(field, "Please enter date", "error");
+        } else if (this.calculate_age(dob) < 16) {
+          this.setStatus(field, "Age must be over 16", "error");
+        } else if (this.calculate_age(dob) > 120) {
+          this.setStatus(field, "Are you sure you are still alive?", "error");
+        } else if ((this.checkbdaycnp() == false) && (document.getElementById("cnp").value != "")) {
+            this.setStatus(field, "Date doesn't match CNP", "error")
+        } else { 
+          this.setStatus(field, null, "success"); 
+        }
+      }
+
+
+      
   
   
     }
+          
+
+
+    checkbdaycnp() {
+      let cnp = document.getElementById("cnp").value;
+      let bday = document.getElementById("bday").value;
+      let cnpDateDigits = cnp.substring(1, 7);
+      let bdayDateDigits = bday.substring(2,4)+bday.substring(5,7)+bday.substring(8,10);
+     
+      if (cnpDateDigits === bdayDateDigits) {
+          return true;
+      } else {
+          return false;
+      }
+  }
   
     setStatus(field, message, status) {
       const errmsgStyle = "color: red";  
@@ -182,6 +218,12 @@ class FormValidator {
         field.style.cssText = errStyle;
         field.nextElementSibling.innerHTML = message + badIcon;
         field.nextElementSibling.style.cssText = errmsgStyle;
+      }
+
+      if (status === "clear") {
+        field.style.cssText = "";
+        field.nextElementSibling.innerHTML = "";
+        field.nextElementSibling.style.cssText = "";
       }
     }
   
@@ -245,6 +287,8 @@ class FormValidator {
         return false;
       }
     }
+
+
   
   }
   

@@ -31,7 +31,7 @@ function closeOverlay() {
 }
 
 
-
+ 
 
 let timeoutOverlay = null;
 
@@ -43,16 +43,14 @@ function ClearFields() {
 
     this.form = form;
     this.fields = fields;
-    
     form.reset();
-    // console.log(form);
 
     let self = this;
     this.fields.forEach(field => {
         const input = document.querySelector(`#${field}`);
         input.style.cssText = "";
         input.nextElementSibling.innerHTML = "";
-
+        
     })
 
 
