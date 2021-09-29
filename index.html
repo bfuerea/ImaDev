@@ -1,164 +1,172 @@
-
-
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<html lang="en">
 
-        <!--==================== Google Font + Icons ====================-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@485&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-        
-        <!--==================== CSS ====================-->
-        <link rel="stylesheet" href="css/newMain.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!--==================== Google Font + Icons ====================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@485&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="css/newMain.css">
 
 
-        <title>Responsive Form</title>
-    </head>
-    <body>
-        <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-            
-             <nav>
-                <div class="theme-switch-wrapper">
-                     <label class="theme-switch" for="checkbox">
-                  <input type="checkbox" id="checkbox" />
-                  <div class="slider round"></div>
+    <title>Responsive Form</title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+
+        <nav>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
                 </label>
-                  <em>Enable Dark Mode!</em>
+                <em>Enable Dark Mode!</em>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <h1>Greetings!</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore repellat, ullam delectus molestias
+                nulla reiciendis.</p>
+        </section>
+
+        <!--==================== FORM ====================-->
+        <section class="form section" id="sectionform">
+
+            <form class="form" id="f1">
+                <div class="input-group">
+                    <legend>Username*</legend>
+                    <input id="username" placeholder="User Name" type="text" class="input">
+                    <span class="message"></span>
                 </div>
-              </nav>  
-        </header>
 
-        <!--==================== MAIN ====================-->
-        <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home section" id="home">
-                <h1>Greetings!</h1> 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore repellat, ullam delectus molestias nulla reiciendis.</p>
-            </section>
+                <div class="input-group">
+                    <legend for="email" class="label">Email*</legend>
+                    <input id="email" type="email" class="input" autocomplete placeholder="email@address.domain">
+                    <span class="message"></span>
+                </div>
 
-            <!--==================== FORM ====================-->
-            <section class="form section" id="sectionform">
-                
-                <form class="form" id="f1">
-                    <div class="input-group">
-                            <legend>Username*</legend>
-                            <input id="username" placeholder="User Name" type="text" class="input">
-                            <span class="message"></span>
-                    </div>
-                    
-                    <div class="input-group">
-                        <legend for="email" class="label">Email*</legend>
-                        <input id="email" type="email" class="input" autocomplete placeholder="email@address.domain" >
-                        <span class="message"></span>
-                    </div>
-                    
-                    <div class="input-group">
-                        <label for="password" class="label">Password*</label>
-                        <input id="password" type="password" class="input" >
-                        <span class="message"></span>
-                    </div>
+                <div class="input-group">
+                    <label for="password" class="label">Password*</label>
+                    <input id="password" type="password" class="input">
+                    <span class="message"></span>
+                </div>
 
-                    <div class="input-group">
-                        <label for="password_confirmation" class="label">Password Confirmation*</label>
-                        <input id="password_confirmation" type="password" class="input" >
-                        <span class="message"></span>
-                    </div>
-                    
+                <div class="input-group">
+                    <label for="password_confirmation" class="label">Password Confirmation*</label>
+                    <input id="password_confirmation" type="password" class="input">
+                    <span class="message"></span>
+                </div>
 
-                    <div class="input-group">
-<label for="title" class="label">Title</label>
-<select id="title" class="title">
-                            <option></option>
-                            <option>Dr.</option>
-                            <option>Mr.</option>
-                            <option>Ms.</option>
-                            <option>Mrs.</option>
-                            <option>Miss</option>
-                            <option>Mx.</option>
-                            <option>Sir</option>
-                            <option>Cllr.</option>
-                            <option>Lady</option>
-                            <option>Lord</option>
-                        </select>
-                   </div>
-                    <div class="input-group">
-                        <label for="name" class="label">Name*</label>
-                        
-                        <input id="name" placeholder="*First Name Middle Name Last Name" type="text" class="input">
-                        <span class="message"></span>
-                    </div>
-                    
-                    <div class="input-group">
-                        <label for="cnp" class="label">CNP*</label>
-                        <input id="cnp" placeholder="cnp" type="text" class="input" >
-                        <span class="message"></span>
-                    </div>
-                    
-                    <div class="input-group__inline">
-                            <label for="sex" class="label">Sex </label>
-                            <!-- <label> <input type=radio name=size> Female </label>
+                <div class="input-group">
+                    <label for="title" class="label">Title</label>
+                    <select id="title" class="title">
+                        <option></option>
+                        <option>Dr.</option>
+                        <option>Mr.</option>
+                        <option>Ms.</option>
+                        <option>Mrs.</option>
+                        <option>Miss</option>
+                        <option>Mx.</option>
+                        <option>Sir</option>
+                        <option>Cllr.</option>
+                        <option>Lady</option>
+                        <option>Lord</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="name" class="label">Name*</label>
+
+                    <input id="name" placeholder="*First Name Middle Name Last Name" type="text" class="input">
+                    <span class="message"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="cnp" class="label">CNP*</label>
+                    <input id="cnp" placeholder="cnp" type="text" class="input">
+                    <span class="message"></span>
+                </div>
+
+                <div class="input-group__inline">
+                    <label for="sex" class="label">Sex </label>
+                    <!-- <label> <input type=radio name=size> Female </label>
                             <label> <input type=radio name=size> Male </label>
                             <label> <input type=radio name=size> Other </label> -->
-                            <input type="radio" id= "sex_m" name="sex" value="male">Male
-                            <input type="radio" id= "sex_f" name="sex" value="female">Female
-                            <input type="radio" id= "sex_o" name="sex" value="alien">Other
-                        <span class="message"></span>
-                    </div>
+                    <input type="radio" id="sex_m" name="sex" value="male">Male
+                    <input type="radio" id="sex_f" name="sex" value="female">Female
+                    <input type="radio" id="sex_o" name="sex" value="alien">Other
+                    <span class="message"></span>
+                </div>
 
-                    <div class="input-group">
-                        <label for="birthdate" class="label">Birthday*</label>
-                        <input id="bday" type="date" class="input">
-                        <span class="message"></span>
-                    </div>
-                    
-                    <div class="input-group__inline">
-                        <label for="gdpr" class="label"></label>
-                        <input type="checkbox" id="gdpr" > I Agree to Terms & Conditions*
-                        <span class="message"></span>
-                    </div>
-                    <div class="infoText">Fields marked with * are mandatory.</div>
-                    <div class="buttons">
-                        <button type="button" onclick="ClearFields()">Clear ALL fields</button>
-                        <button type="submit" id="submitdata">SUBMIT</button>
-                    </div>
-                </form>    
-            </section>
+                <div class="input-group">
+                    <label for="bday" class="label">Birthday*</label>
+                    <input id="bday" type="date" class="input">
+                    <span class="message"></span>
+                </div>
 
-            <section class="info section">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus atque unde illo alias nemo voluptates eum et commodi sint reprehenderit doloribus neque blanditiis ipsam soluta aspernatur, ipsa obcaecati possimus expedita maiores. Blanditiis voluptatum ratione aliquam voluptates temporibus accusantium, ea exercitationem consequatur obcaecati, velit accusamus delectus repudiandae placeat sint ut recusandae fugiat sunt totam! Saepe praesentium animi facilis? Dignissimos similique deserunt, veniam modi expedita temporibus ea ad natus, commodi nulla at illo itaque architecto cum eius qui, deleniti quibusdam impedit.</p>
-            </section>
+                <div class="input-group__inline">
+                    <label for="gdpr" class="label"></label>
+                    <input type="checkbox" id="gdpr"> I Agree to Terms & Conditions*
+                    <span class="message"></span>
+                </div>
+                <div class="infoText">Fields marked with * are mandatory.</div>
+                <div class="buttons">
+                    <button type="button" id="cleardata" onclick="ClearFields()">Clear ALL fields</button>
+                    <button type="submit" id="submitdata">SUBMIT</button>
+                </div>
+            </form>
+        </section>
 
-        </main>
+        <section class="info section">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus atque unde illo alias nemo
+                voluptates eum et commodi sint reprehenderit doloribus neque blanditiis ipsam soluta aspernatur, ipsa
+                obcaecati possimus expedita maiores. Blanditiis voluptatum ratione aliquam voluptates temporibus
+                accusantium, ea exercitationem consequatur obcaecati, velit accusamus delectus repudiandae placeat sint
+                ut recusandae fugiat sunt totam! Saepe praesentium animi facilis? Dignissimos similique deserunt, veniam
+                modi expedita temporibus ea ad natus, commodi nulla at illo itaque architecto cum eius qui, deleniti
+                quibusdam impedit.</p>
+        </section>
 
-        <div id="myModal" class="modal">
-            <!-- Modal content -->
-        </div>
-        <div id="overlay" class="timedoverlay"> 
-            <!-- timed overlay content -->
-        </div>
+    </main>
 
-    
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+    </div>
+    <div id="overlay" class="timedoverlay">
+        <!-- timed overlay content -->
+    </div>
 
 
 
-        <!--==================== FOOTER ====================-->
-        <footer class="footer">
-            &copy; Lorem ipsum dolor sit amet consectetur adipisicing.
-        </footer>
-        
 
-        <!--==================== EXTRA JS ====================-->
-        <script src="js/toggle.js"></script>
-        <script src="js/newFunctions.js"></script>
 
-        <!--==================== MAIN JS ====================-->
-        <script src="js/newmain.js"></script>
-    </body>
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        &copy; Lorem ipsum dolor sit amet consectetur adipisicing.
+    </footer>
+
+
+    <!--==================== EXTRA JS ====================-->
+    <script src="js/toggle.js"></script>
+    <script src="js/newFunctions.js"></script>
+
+    <!--==================== MAIN JS ====================-->
+    <script src="js/newmain.js"></script>
+</body>
+
 </html>

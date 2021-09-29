@@ -193,6 +193,7 @@ input:checked + .slider:before {
   min-height: 40px;
   font-size: inherit;
   color: inherit;
+  border-radius: 8px;
 }
 
 .input-group {
@@ -229,11 +230,15 @@ button {
   position: relative;
   min-height: 40px;
   font: inherit;
+  border-radius: 8px;
+  /* border-style: hidden; */
 }
 /* .buttons {
   background-color: #020a38;
 } */
-
+#cleardata {
+  background-color: #ccc;
+}
 
 footer {
   padding-top: 3rem;
