@@ -65,7 +65,7 @@ TODO: unit tests
       if (field.id === "username") {
         let minchar = 6;
         let maxchar = 255;
-        if (field.value.length <= minchar) {
+        if (field.value.length < minchar) {
           this.setStatus(field, `${field.id} must have at least ` + minchar + " characters", "error");
         } else if (field.value.length >= maxchar) {
           this.setStatus(field, `${field.id}'s text is too long. Maximum allowed ` + maxchar, "error");
@@ -84,9 +84,9 @@ TODO: unit tests
 
       // Proper name check
       if (field.id === "name") {
-        let minchar = 1;
+        let minchar = 2;
         let maxchar = 800;
-        if (field.value.length <= minchar) {
+        if (field.value.length < minchar) {
           this.setStatus(field, `${field.id} must have at least ` + minchar + " character", "error");
         } else if (field.value.length >= maxchar) {
           this.setStatus(field, `${field.id}'s text is too long. Maximum allowed ` + maxchar, "error");
