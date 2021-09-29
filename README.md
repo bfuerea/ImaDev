@@ -1,4 +1,5 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/dd6d1e54-f487-4929-986d-4f0c1a3cf181/deploy-status)](https://app.netlify.com/sites/imadev/deploys)
+v1 [![Netlify Status](https://api.netlify.com/api/v1/badges/dd6d1e54-f487-4929-986d-4f0c1a3cf181/deploy-status)](https://app.netlify.com/sites/imadev/deploys)
+v2 [![Netlify Status](https://api.netlify.com/api/v1/badges/135e5f18-f08b-4fcd-ad52-63260df60eca/deploy-status)](https://app.netlify.com/sites/imadev2/deploys)
 
 # ImaDev
 Checking my webDev knowledge in 2021.
