@@ -168,8 +168,12 @@ TODO: read up on latest "js code best practices".
       // Birth date is a special field so we need to check it individually
       if (field.id === "bday") {
         let dob = new Date(field.value) ;
+        let currYear = new Date().getFullYear();
+        let dobYear = dob.getFullYear();
         if (field.value === '') { 
           this.setStatus(field, "Please enter date", "error");
+        } else if (dobYear > currYear) {
+          this.setStatus(field, "Are you from the future?", "error");
         } else if (this.calculate_age(dob) < 16) {
           this.setStatus(field, "Age must be over 16", "error");
         } else if (this.calculate_age(dob) > 120) {
