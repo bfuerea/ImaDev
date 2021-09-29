@@ -90,3 +90,5 @@ Lightouse result after UI change
 --- browser - dark theme
 ![image](https://user-images.githubusercontent.com/18399890/135145641-9c1483d8-c157-41d2-a231-4e98108a7a4f.png)
 
+19. min + max char for username research
+    - https://security.stackexchange.com/questions/46875/why-is-there-a-minimum-username-length

@@ -72,7 +72,7 @@ TODO: unit tests
         } else { 
               // const re = /[a-zA-Z._0-9]*/;   
               // const re = /[\w\d][^\W]/;
-              const re = /^[a-zA-Z]{6,}[a-zA-Z_]+[0-9_]*$/;
+              const re = /^[a-zA-Z]{1,}[a-zA-Z._]*[0-9]*$/;
               if (re.test(field.value) && (!field.value.includes(' '))) {
                 this.setStatus(field, null, "success");
               } else {
