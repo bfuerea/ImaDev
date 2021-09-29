@@ -19,26 +19,10 @@ class FormValidator {
           const input = document.querySelector(`#${field}`);
           self.validateFields(input);
         });
-  
-/* 
------------- Below is a COMPROMISE - already close to entering [IF-ELSE IF] hell and I know I should create functions for checking fields but come on ... ------------
-Checking fields against eachother isn't that clean using this method. Could be improved by turning all field checks into individual functions to be reused. 
-Not sure if that becomes func(func(func(()))) hell or whatever
-
-TODO: read up on latest "js code best practices". 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-*/
-        if (this.checkbdaycnp() == false) {
-          const bdayfield = document.querySelector ('#bday');
-          this.setStatus(bdayfield, "Date doesn't match CNP", "error");
-        } else {
           if (self.allOK() == true){
             this.createModal();
           }
-        }
-
       });
-  
   
     }
   
