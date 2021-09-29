@@ -90,3 +90,6 @@ Lightouse result after UI change
 --- browser - dark theme
 ![image](https://user-images.githubusercontent.com/18399890/135145641-9c1483d8-c157-41d2-a231-4e98108a7a4f.png)
 
+19. Some resources for new branch for automatically filling in specific fields
+    - https://www.convertcsv.com/csv-to-json.htm
+    - https://ro.wikipedia.org/wiki/Cod_numeric_personal_(Rom%C3%A2nia)

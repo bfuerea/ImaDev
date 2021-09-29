@@ -1,0 +1,202 @@
+[
+    {
+        "Cod": 1,
+        "Judet": "Alba"
+    },
+    {
+        "Cod": 2,
+        "Judet": "Arad"
+    },
+    {
+        "Cod": 3,
+        "Judet": "Argeș"
+    },
+    {
+        "Cod": 4,
+        "Judet": "Bacău"
+    },
+    {
+        "Cod": 5,
+        "Judet": "Bihor"
+    },
+    {
+        "Cod": 6,
+        "Judet": "Bistrița-Năsăud"
+    },
+    {
+        "Cod": 7,
+        "Judet": "Botoșani"
+    },
+    {
+        "Cod": 8,
+        "Judet": "Brașov"
+    },
+    {
+        "Cod": 9,
+        "Judet": "Brăila"
+    },
+    {
+        "Cod": 10,
+        "Judet": "Buzău"
+    },
+    {
+        "Cod": 11,
+        "Judet": "Caraș-Severin"
+    },
+    {
+        "Cod": 12,
+        "Judet": "Cluj"
+    },
+    {
+        "Cod": 13,
+        "Judet": "Constanța"
+    },
+    {
+        "Cod": 14,
+        "Judet": "Covasna"
+    },
+    {
+        "Cod": 15,
+        "Judet": "Dâmbovița"
+    },
+    {
+        "Cod": 16,
+        "Judet": "Dolj"
+    },
+    {
+        "Cod": 17,
+        "Judet": "Galați"
+    },
+    {
+        "Cod": 18,
+        "Judet": "Gorj"
+    },
+    {
+        "Cod": 19,
+        "Judet": "Harghita"
+    },
+    {
+        "Cod": 20,
+        "Judet": "Hunedoara"
+    },
+    {
+        "Cod": 21,
+        "Judet": "Ialomița"
+    },
+    {
+        "Cod": 22,
+        "Judet": "Iași"
+    },
+    {
+        "Cod": 23,
+        "Judet": "Ilfov"
+    },
+    {
+        "Cod": 24,
+        "Judet": "Maramureș"
+    },
+    {
+        "Cod": 25,
+        "Judet": "Mehedinți"
+    },
+    {
+        "Cod": 26,
+        "Judet": "Mureș"
+    },
+    {
+        "Cod": 27,
+        "Judet": "Neamț"
+    },
+    {
+        "Cod": 28,
+        "Judet": "Olt"
+    },
+    {
+        "Cod": 29,
+        "Judet": "Prahova"
+    },
+    {
+        "Cod": 30,
+        "Judet": "Satu Mare"
+    },
+    {
+        "Cod": 31,
+        "Judet": "Sălaj"
+    },
+    {
+        "Cod": 32,
+        "Judet": "Sibiu"
+    },
+    {
+        "Cod": 33,
+        "Judet": "Suceava"
+    },
+    {
+        "Cod": 34,
+        "Judet": "Teleorman"
+    },
+    {
+        "Cod": 35,
+        "Judet": "Timiș"
+    },
+    {
+        "Cod": 36,
+        "Judet": "Tulcea"
+    },
+    {
+        "Cod": 37,
+        "Judet": "Vaslui"
+    },
+    {
+        "Cod": 38,
+        "Judet": "Vâlcea"
+    },
+    {
+        "Cod": 39,
+        "Judet": "Vrancea"
+    },
+    {
+        "Cod": 40,
+        "Judet": "București"
+    },
+    {
+        "Cod": 41,
+        "Judet": "București - Sector 1"
+    },
+    {
+        "Cod": 42,
+        "Judet": "București - Sector 2"
+    },
+    {
+        "Cod": 43,
+        "Judet": "București - Sector 3"
+    },
+    {
+        "Cod": 44,
+        "Judet": "București - Sector 4"
+    },
+    {
+        "Cod": 45,
+        "Judet": "București - Sector 5"
+    },
+    {
+        "Cod": 46,
+        "Judet": "București - Sector 6"
+    },
+    {
+        "Cod": 51,
+        "Judet": "Călărași"
+    },
+    {
+        "Cod": 52,
+        "Judet": "Giurgiu"
+    },
+    {
+        "Cod": 47,
+        "Judet": "Bucuresti - Sector 7 (desfiintat)"
+    },
+    {
+        "Cod": 48,
+        "Judet": "Bucuresti - Sector 8 (desfiintat)"
+    }
+]

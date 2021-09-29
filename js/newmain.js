@@ -100,9 +100,12 @@ TODO: read up on latest "js code best practices".
           if (cnpCheck === true) {
             this.setStatus(field, null, "success");
             const bdayfield = this.form.querySelector('#bday');
-            if ((this.checkbdaycnp() == false) && (bdayfield.value != "")){
-              this.setStatus(bdayfield, "Date doesn't match CNP", "error");
-            }
+            const blocfield = this.form.querySelector('#bloc');
+            bdayfield.value = this.extractBirthday(field);
+            blocfield.value = this.extractLocation(field);
+            // if ((this.checkbdaycnp() == false) && (bdayfield.value != "")){
+            //   this.setStatus(bdayfield, "Date doesn't match CNP", "error");
+            //}
           } else {
             this.setStatus(field, "Please enter a valid cnp", "error");
           }
@@ -166,20 +169,20 @@ TODO: read up on latest "js code best practices".
       }
 
       // Birth date is a special field so we need to check it individually
-      if (field.id === "bday") {
-        let dob = new Date(field.value) ;
-        if (field.value === '') { 
-          this.setStatus(field, "Please enter date", "error");
-        } else if (this.calculate_age(dob) < 16) {
-          this.setStatus(field, "Age must be over 16", "error");
-        } else if (this.calculate_age(dob) > 120) {
-          this.setStatus(field, "Are you sure you are still alive?", "error");
-        } else if ((this.checkbdaycnp() == false) && (document.getElementById("cnp").value != "")) {
-            this.setStatus(field, "Date doesn't match CNP", "error")
-        } else { 
-          this.setStatus(field, null, "success"); 
-        }
-      }
+      // if (field.id === "bday") {
+      //   let dob = new Date(field.value) ;
+      //   if (field.value === '') { 
+      //     this.setStatus(field, "Please enter date", "error");
+      //   } else if (this.calculate_age(dob) < 16) {
+      //     this.setStatus(field, "Age must be over 16", "error");
+      //   } else if (this.calculate_age(dob) > 120) {
+      //     this.setStatus(field, "Are you sure you are still alive?", "error");
+      //   } else if ((this.checkbdaycnp() == false) && (document.getElementById("cnp").value != "")) {
+      //       this.setStatus(field, "Date doesn't match CNP", "error")
+      //   } else { 
+      //     this.setStatus(field, null, "success"); 
+      //   }
+      // }
 
 
       
@@ -187,20 +190,85 @@ TODO: read up on latest "js code best practices".
   
     }
           
-
-
-    checkbdaycnp() {
-      let cnp = document.getElementById("cnp").value;
-      let bday = document.getElementById("bday").value;
-      let cnpDateDigits = cnp.substring(1, 7);
-      let bdayDateDigits = bday.substring(2,4)+bday.substring(5,7)+bday.substring(8,10);
-     
-      if (cnpDateDigits === bdayDateDigits) {
-          return true;
+    extractBirthday(cnp) {
+      let yearDigits = cnp.value.substring(1,3);
+      let monthDigits = cnp.value.substring(3,5);
+      let dayDigits = cnp.value.substring(5,7);
+      if (yearDigits.Number < 70) {
+        yearDigits = "20" + yearDigits;
       } else {
-          return false;
+        yearDigits = "19" + yearDigits;
       }
-  }
+
+      let birthdate = yearDigits + "-" + monthDigits + "-" + dayDigits;
+      return birthdate;
+      
+    }
+
+    extractLocation(cnp) {
+      let location = "";
+      let locationCode = cnp.value.substring(7,9);
+      // let completeList = this.initJson();
+      const json ='[{"Cod":1,"Judet":"Alba"},{"Cod":2,"Judet":"Arad"},{"Cod":3,"Judet":"Argeș"},{"Cod":4,"Judet":"Bacău"},{"Cod":5,"Judet":"Bihor"},{"Cod":6,"Judet":"Bistrița-Năsăud"},{"Cod":7,"Judet":"Botoșani"},{"Cod":8,"Judet":"Brașov"},{"Cod":9,"Judet":"Brăila"},{"Cod":10,"Judet":"Buzău"},{"Cod":11,"Judet":"Caraș-Severin"},{"Cod":12,"Judet":"Cluj"},{"Cod":13,"Judet":"Constanța"},{"Cod":14,"Judet":"Covasna"},{"Cod":15,"Judet":"Dâmbovița"},{"Cod":16,"Judet":"Dolj"},{"Cod":17,"Judet":"Galați"},{"Cod":18,"Judet":"Gorj"},{"Cod":19,"Judet":"Harghita"},{"Cod":20,"Judet":"Hunedoara"},{"Cod":21,"Judet":"Ialomița"},{"Cod":22,"Judet":"Iași"},{"Cod":23,"Judet":"Ilfov"},{"Cod":24,"Judet":"Maramureș"},{"Cod":25,"Judet":"Mehedinți"},{"Cod":26,"Judet":"Mureș"},{"Cod":27,"Judet":"Neamț"},{"Cod":28,"Judet":"Olt"},{"Cod":29,"Judet":"Prahova"},{"Cod":30,"Judet":"SatuMare"},{"Cod":31,"Judet":"Sălaj"},{"Cod":32,"Judet":"Sibiu"},{"Cod":33,"Judet":"Suceava"},{"Cod":34,"Judet":"Teleorman"},{"Cod":35,"Judet":"Timiș"},{"Cod":36,"Judet":"Tulcea"},{"Cod":37,"Judet":"Vaslui"},{"Cod":38,"Judet":"Vâlcea"},{"Cod":39,"Judet":"Vrancea"},{"Cod":40,"Judet":"București"},{"Cod":41,"Judet":"București-Sector1"},{"Cod":42,"Judet":"București-Sector2"},{"Cod":43,"Judet":"București-Sector3"},{"Cod":44,"Judet":"București-Sector4"},{"Cod":45,"Judet":"București-Sector5"},{"Cod":46,"Judet":"București-Sector6"},{"Cod":51,"Judet":"Călărași"},{"Cod":52,"Judet":"Giurgiu"},{"Cod":47,"Judet":"Bucuresti-Sector7(desfiintat)"},{"Cod":48,"Judet":"Bucuresti-Sector8(desfiintat)"}]'
+      const obj = JSON.parse(json);
+      // console.log (obj[47].Judet + " - " + obj[47].Cod);
+      
+/* this allows to go through all keys in json example */
+      for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            // console.log("%c "+key + " = " + obj[key].Cod + " - " + obj[key].Judet);
+            if (obj[key].Cod === parseInt(locationCode)) {
+              location = obj[key].Judet;
+            }
+        }
+      }
+
+      // const keys = Object.keys(completeList);
+      // keys.forEach((key, index) => {
+      //   console.log(`${key}: ${completeList[key]}`);
+      // });
+      
+      // location = completeList[0]["cod"];
+      return location;
+
+    }
+      
+    
+
+  //   initJson() {
+  //     this.loadJSON(function(response) {
+  //      // Parse JSON string into object
+  //        var actual_JSON = JSON.parse(response);
+  //     });
+  //    }
+     
+
+  //   loadJSON(callback) {   
+
+  //     var xobj = new XMLHttpRequest();
+  //         xobj.overrideMimeType("application/json");
+  //     xobj.open('GET', 'data/cnpLocation.json', true); // Replace 'my_data' with the path to your file
+  //     xobj.onreadystatechange = function () {
+  //           if (xobj.readyState == 4 && xobj.status == "200") {
+  //             // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+  //             callback(xobj.responseText);
+  //           }
+  //     };
+  //     xobj.send(null);  
+  //  }
+  
+  //   checkbdaycnp() {
+  //     let cnp = document.getElementById("cnp").value;
+  //     let bday = document.getElementById("bday").value;
+  //     let cnpDateDigits = cnp.substring(1, 7);
+  //     let bdayDateDigits = bday.substring(2,4)+bday.substring(5,7)+bday.substring(8,10);
+     
+  //     if (cnpDateDigits === bdayDateDigits) {
+  //         return true;
+  //     } else {
+  //         return false;
+  //     }
+  // }
   
     setStatus(field, message, status) {
       const errmsgStyle = "color: red";  
