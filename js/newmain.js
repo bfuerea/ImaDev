@@ -43,38 +43,48 @@ class FormValidator {
   
     validateFields(field) {
   
-      /* Below line to be used when checking field values output. Also still struggling with whitespaces in several places OR username regex not good enough */
-      // console.log ("checking " + field.id + " value: [" + field.value + "]");
-      
-      
-      // Check presence of values
-      if ((field.id != "gdpr") && (field.id != "bday") && (field.value.length <= 4)) {
-        this.setStatus(field, `${field.id} hasn't got enough characters`, "error");
-      } else if (field.value.length >= 255) {
-        this.setStatus(field, `${field.id}'s text is too long`, "error");
-      } 
-        
+
       // Proper Username check 
       if (field.id === "username") {
-        // const re = /[a-zA-Z._0-9]*/;   
-        const re = /[\w\d][^\W]/;
-        if (re.test(field.value) && (!field.value.includes(' '))) {
-          this.setStatus(field, null, "success");
-        } else {
-          this.setStatus(field, "Please enter a valid username", "error");
+        let minchar = 6;
+        let maxchar = 255;
+        if (field.value.length <= minchar) {
+          this.setStatus(field, `${field.id} must have at least ` + minchar + " characters", "error");
+        } else if (field.value.length >= maxchar) {
+          this.setStatus(field, `${field.id}'s text is too long. Maximum allowed ` + maxchar, "error");
+        } else { 
+                  // const re = /[a-zA-Z._0-9]*/;   
+          const re = /^[a-zA-Z]{1,}[a-zA-Z_.]+[0-9_]*$/;
+          if (re.test(field.value) && (!field.value.includes(' '))) {
+            this.setStatus(field, null, "success");
+          } else {
+            this.setStatus(field, "Only alphanumeric characters and '_'. Must begin with letter.", "error");
+          }
         }
+
+
       }
 
       // Proper name check
       if (field.id === "name") {
-        // const re = /\D+$/i ;
-        // accepting only name space name etc. 
-        const re = /^[a-z.\s]+$/i;
-        if (re.test(field.value)) {
-          this.setStatus(field, null, "success");
+
+        let minchar = 1;
+        let maxchar = 800;
+        if (field.value.length <= minchar) {
+          this.setStatus(field, `${field.id} must have at least ` + minchar + " character", "error");
+        } else if (field.value.length >= maxchar) {
+          this.setStatus(field, `${field.id}'s text is too long. Maximum allowed ` + maxchar, "error");
         } else {
-          this.setStatus(field, "Please enter a valid name", "error");
+                  // const re = /\D+$/i ;
+          // accepting only name space name etc. 
+          const re = /^[a-z.\s]+$/i;
+          if (re.test(field.value)) {
+            this.setStatus(field, null, "success");
+          } else {
+            this.setStatus(field, "Please enter a valid name", "error");
+          }
         }
+
       }
 
       if (field.id === "cnp") {
@@ -101,19 +111,30 @@ class FormValidator {
 
       // check for a valid email address
       if (field.type === "email") {
-        const re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-        if (re.test(field.value)) {
-          this.setStatus(field, null, "success");
+        let minchar = 6;
+        let maxchar = 255;
+        if (field.value.length <= minchar) {
+          this.setStatus(field, `${field.id} must have at least ` + minchar + " characters", "error");
+        } else if (field.value.length >= maxchar) {
+          this.setStatus(field, `${field.id}'s text is too long. Maximum allowed ` + maxchar, "error");
         } else {
-          this.setStatus(field, "Please enter valid email address", "error");
+          const re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+          if (re.test(field.value)) {
+            this.setStatus(field, null, "success");
+          } else {
+            this.setStatus(field, "Please enter valid email address", "error");
+          }
+  
         }
+
+
       }
 
 
       /* TODO: use function to make this password + password_confirmation check more readable and less code  */
       // Checking password combo 
       if (field.id === "password")  {
-        const re = /(?=.*[<>!@#$%^&*])/;
+        const re = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{8,}$/;
         const passconfField = this.form.querySelector('#password_confirmation');
         if (re.test(field.value)) {
           this.setStatus(field, null, "success");
@@ -285,7 +306,7 @@ class FormValidator {
       modal.style.display = "block";
   
       let modalcontent = document.createElement("div");
-      modalcontent.innerHTML = '<div class="modal-header"><span class="close" onclick="closeModal()">&times;</span><h2>Hello there!</h2></div><div class="modal-body"><p>You are about to send sensible data to our servers! Are ya sure about that?</p><button id="sure" onclick="okay()">OK!</button><button id="nope" onclick="closeModal()">NOPE!</button></div><div class="modal-footer"><h3>&copy google helped a lot</h3>'
+      modalcontent.innerHTML = '<div class="modal-header"><span class="close" onclick="closeModal()">&times;</span><h2>Hello there!</h2></div><div class="modal-body"><p>You are about to send sensible data to our servers! Are you sure about that?</p><button id="sure" onclick="okay()">OK!</button><button id="nope" onclick="closeModal()">NOPE!</button></div><div class="modal-footer"><h3>&copy google helped a lot</h3>'
       modalcontent.setAttribute("class","modal-content");
       modal.appendChild(modalcontent);
   

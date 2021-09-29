@@ -202,6 +202,16 @@ input:checked + .slider:before {
   font-style: italic;
 }
 
+.title {
+  color: inherit;
+  border-radius: 8px;
+  border-style: inset;
+  min-height: 40px;
+  border-width: 2px;
+  padding: 5px;
+  padding-inline: 2px;
+}
+
 .input-group {
     display:grid;
     padding: 5px;
