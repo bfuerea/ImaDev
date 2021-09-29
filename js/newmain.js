@@ -48,7 +48,7 @@ class FormValidator {
       if (field.id === "username") {
         let minchar = 6;
         let maxchar = 255;
-        if (field.value.length <= minchar) {
+        if (field.value.length < minchar) {
           this.setStatus(field, `${field.id} must have at least ` + minchar + " characters", "error");
         } else if (field.value.length >= maxchar) {
           this.setStatus(field, `${field.id}'s text is too long. Maximum allowed ` + maxchar, "error");
@@ -70,7 +70,7 @@ class FormValidator {
 
         let minchar = 1;
         let maxchar = 800;
-        if (field.value.length <= minchar) {
+        if (field.value.length < minchar) {
           this.setStatus(field, `${field.id} must have at least ` + minchar + " character", "error");
         } else if (field.value.length >= maxchar) {
           this.setStatus(field, `${field.id}'s text is too long. Maximum allowed ` + maxchar, "error");
