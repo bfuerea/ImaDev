@@ -94,3 +94,8 @@ Lightouse result after UI change
 19. Some resources for new branch for automatically filling in specific fields
     - https://www.convertcsv.com/csv-to-json.htm
     - https://ro.wikipedia.org/wiki/Cod_numeric_personal_(Rom%C3%A2nia)
+
+~Hello 2022~
+
+Added Cypress.io for automated tests. see package.json for further info on running it. 
+Node package required so run npm for it since I've added the folder to gitignore (keeping the commit size to minimum). 
