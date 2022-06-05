@@ -4,7 +4,7 @@
   "description": "Proper js and related tech experience",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress:open": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/bfuerea/ImaDev/issues"
   },
-  "homepage": "https://github.com/bfuerea/ImaDev#readme"
+  "homepage": "https://github.com/bfuerea/ImaDev#readme",
+  "devDependencies": {
+    "cypress": "^10.0.2"
+  }
 }
