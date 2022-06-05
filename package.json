@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/bfuerea/ImaDev#readme",
   "devDependencies": {
-    "cypress": "^10.0.2"
+    "cypress": "^10.0.2",
+    "eslint-plugin-cypress": "^2.12.1"
   }
 }
